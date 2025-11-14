@@ -1,1 +1,437 @@
-# 📋 TEMPLATE: Product Requirements Document (PRD)\n\n**Projeto**: [Nome do Projeto]\n**Data**: [__/__/____]\n**Versão**: 1.0\n**Status**: 🟡 Rascunho | 🟢 Aprovado\n**Cliente**: [Nome do Cliente]\n**Responsável**: [Seu Nome]\n\n---\n\n## 1. RESUMO EXECUTIVO (LEIA PRIMEIRO)\n\n### Visão em Uma Frase\n[Uma única frase que descreve completamente o projeto]\n\n### Objetivos de Negócio\n- [ ] Objetivo 1: [Descrição]\n- [ ] Objetivo 2: [Descrição]\n- [ ] Objetivo 3: [Descrição]\n\n### Resultado Esperado\nQuando este projeto estiver completo:\n- Usuários conseguirão: [X]\n- Empresa economizará: [X]\n- Métrica de sucesso: [X]\n\n---\n\n## 2. CONTEXTO\n\n### Sobre a Empresa\n- **Nome**: [Nome da Empresa]\n- **Tamanho**: [Pequena/Média/Grande] (X pessoas)\n- **Indústria**: [Setor]\n- **Mercado**: [Mercado alvo]\n\n### Situação Atual\nDescreva como as coisas funcionam HOJE:\n\n[Descrição detalhada do status quo]\n\n### Por Que Agora?\nPor que este projeto é importante NESTE MOMENTO?\n\n[Explicação da urgência]\n\n---\n\n## 3. PROBLEMA\n\n### Problema Principal\n[Descrição clara e específica do problema]\n\n### Impacto do Problema\n- **Tempo desperdiçado**: X horas/semana\n- **Custo financeiro**: R$ X/mês\n- **Satisfação do usuário**: X% (NPS)\n- **Outro impacto**: [Descrição]\n\n### Como Resolvem Hoje\n[Descrição da solução atual/workaround]\n\n### Por Que Não É Suficiente\n[Limitações da solução atual]\n\n### Usuários Afetados\n- [Tipo de usuário 1]: X pessoas\n- [Tipo de usuário 2]: X pessoas\n- Total: X pessoas\n\n---\n\n## 4. SOLUÇÃO PROPOSTA\n\n### Visão Geral\n[Descrição de como a aplicação web resolveria o problema]\n\n### Como Funciona (Fluxo Alto Nível)\n1. [Usuário faz X]\n2. [Sistema faz Y]\n3. [Resultado Z]\n\n### Benefícios Principais\n- **Benefício 1**: [Descrição e impacto]\n- **Benefício 2**: [Descrição e impacto]\n- **Benefício 3**: [Descrição e impacto]\n\n### Diferencial\nO que diferencia esta solução?\n- vs Solução Atual: [Diferença]\n- vs Competitor X: [Diferença]\n- vs Competitor Y: [Diferença]\n\n---\n\n## 5. PERSONAS\n\n### Persona 1: [Nome Fictício]\n\n**Perfil Demográfico**\n- Idade: XX anos\n- Profissão: [Profissão]\n- Tech-savvy: [Iniciante/Intermediário/Avançado]\n- Tempo com tecnologia: [X horas/dia]\n\n**Goals (Objetivos)**\n- Objetivo 1: [Descrição]\n- Objetivo 2: [Descrição]\n\n**Pain Points (Problemas)**\n- Problema 1: [Descrição]\n- Problema 2: [Descrição]\n\n**Contexto de Uso**\n- Frequência: [X vezes/dia]\n- Duração: [X minutos/uso]\n- Local: [Desktop/Mobile/Tablet ou Local]\n- Ambiente: [Descrição do ambiente]\n\n**Exemplo de Dia Típico**\n[Narrativa de como o usuário usaria a app em um dia típico]\n\n---\n\n### Persona 2: [Nome Fictício]\n\n[Repetir seção acima]\n\n---\n\n### Persona 3 (Opcional): [Nome Fictício]\n\n[Repetir seção acima]\n\n---\n\n## 6. FEATURES\n\n### Features MVP (Essenciais para Lançamento)\n\nEstas são as features CRÍTICAS. Sem elas, não lançamos.\n\n#### Feature 1: [Nome]\n**Descrição**:\n[O que faz]\n\n**Por quê**:\n[Por que é importante]\n\n**Exemplo de Uso**:\n[Como o usuário usaria]\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 2: [Nome]\n**Descrição**: [O que faz]\n**Por quê**: [Por que é importante]\n**Exemplo de Uso**: [Como o usuário usaria]\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 3: [Nome]\n**Descrição**: [O que faz]\n**Por quê**: [Por que é importante]\n**Exemplo de Uso**: [Como o usuário usaria]\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 4-10: [Nome]\n[Repetir padrão acima]\n\n---\n\n### Features Pós-MVP (Para Futuro)\n\nEstas features são legais mas NÃO críticas para lançamento.\n\n#### Feature A: [Nome]\n**Descrição**: [O que faz]\n**Impacto**: [Por que seria útil]\n**Timeline**: [Semana/Mês que planeja adicionar]\n\n---\n\n#### Feature B-Z: [Nome]\n[Repetir padrão acima]\n\n---\n\n## 7. REQUISITOS TÉCNICOS\n\n### Usuários\n- **Dia 1**: [X usuários esperados]\n- **Mês 1**: [X usuários]\n- **Mês 3**: [X usuários]\n- **Mês 6**: [X usuários]\n\n### Dados & Conformidade\n- **Dados sensíveis?**: SIM / NÃO\n- **Se sim, quais**: [Tipo de dados]\n- **Conformidade necessária**: LGPD / GDPR / HIPAA / Nenhuma\n\n### Plataformas\n- [ ] Web Desktop\n- [ ] Mobile (iOS)\n- [ ] Mobile (Android)\n- [ ] Desktop App\n\n### Integrações\n- [ ] Google Workspace\n- [ ] Microsoft 365\n- [ ] Stripe/Pagamento\n- [ ] Outro: [Descrever]\n\n### Performance\n- **Disponibilidade esperada**: [X%] uptime (99%, 99.9%, etc)\n- **Tempo de resposta aceitável**: [X segundos]\n- **Conexão esperada**: [4G/WiFi/Ambas]\n\n### Idioma\n- Idioma principal: [Português/English/Outro]\n- Necessário multi-idioma? [SIM/NÃO]\n- Se sim, quais: [Idiomas]\n\n---\n\n## 8. TIMELINE\n\n### Datas Importantes\n- **Data de Lançamento**: [__/__/____]\n- **Razão dessa data**: [Por que essa data?]\n\n### Milestones\n- **Milestone 1** (Data: __/__/__): [Descrição]\n- **Milestone 2** (Data: __/__/__): [Descrição]\n- **Milestone 3** (Data: __/__/__): [Descrição]\n\n### Duração Estimada\n- **MVP**: [X] semanas\n- **Total**: [X] meses\n\n### Constraints\n- Existe deadline duro? [SIM/NÃO]\n- Pode mudar de escopo se necessário? [SIM/NÃO]\n\n---\n\n## 9. ORÇAMENTO (Opcional)\n\n### Faixa Orçamentária\nR$ [X,XXX] - R$ [X,XXX]\n\n### Modelo de Pagamento\n- [ ] Fixo (valor único)\n- [ ] Mensal (valor/mês por X meses)\n- [ ] Milestones (parcelas por conquistas)\n- [ ] Hora (valor/hora)\n\n### Custos Operacionais (Mensal)\n- **Hosting**: R$ X\n- **Banco de dados**: R$ X\n- **Email/Notificações**: R$ X\n- **Outros**: R$ X\n- **Total**: R$ X\n\n---\n\n## 10. MÉTRICAS DE SUCESSO\n\n### Métrica Primária\n[A métrica mais importante]\n\n**Target**: [Valor esperado]\n**Prazo**: [Quando atingir]\n**Importância**: 🔴 CRÍTICA\n\n### Métricas Secundárias\n\n**Métrica 2**: [Descrição]\n- Target: [Valor]\n- Prazo: [Quando]\n\n**Métrica 3**: [Descrição]\n- Target: [Valor]\n- Prazo: [Quando]\n\n### Critérios de Aceitação\nO projeto é considerado bem-sucedido quando:\n- [ ] Critério 1: [Descrição]\n- [ ] Critério 2: [Descrição]\n- [ ] Critério 3: [Descrição]\n\n---\n\n## 11. DEPENDÊNCIAS & RISCOS\n\n### Dependências\n- [ ] Acesso a dados do cliente: [SIM/NÃO]\n- [ ] Integrações com sistemas: [SIM/NÃO]\n- [ ] Aprovações regulatórias: [SIM/NÃO]\n- [ ] Outras: [Descrever]\n\n### Riscos\n- **Risco 1**: [Descrição]\n  - Probabilidade: [Alta/Média/Baixa]\n  - Impacto: [Alto/Médio/Baixo]\n  - Mitigação: [Como evitar]\n\n- **Risco 2**: [Descrição]\n  - Probabilidade: [Alta/Média/Baixa]\n  - Impacto: [Alto/Médio/Baixo]\n  - Mitigação: [Como evitar]\n\n---\n\n## 12. APROVAÇÃO\n\n### Stakeholders\n- [ ] **Cliente**: [Nome] - Assinado em __/__/__\n- [ ] **Product Manager**: [Nome] - Assinado em __/__/__\n- [ ] **Tech Lead**: [Nome] - Assinado em __/__/__\n\n### Histórico de Versões\n\n| Versão | Data | Autor | Mudanças |\n|--------|------|-------|----------|\n| 1.0 | __/__/__ | [Nome] | Versão inicial |\n| 1.1 | __/__/__ | [Nome] | [Mudanças] |\n\n---\n\n## 📎 Anexos\n\n### Referências\n- [Link 1]()\n- [Link 2]()\n\n### Documentos Relacionados\n- [Documento 1]()\n- [Documento 2]()\n\n### Screenshots/Mockups (Opcional)\n[Adicionar imagens de referência ou mockups]\n\n---\n\n**Documento classificado como**: CONFIDENCIAL / INTERNO / PÚBLICO\n**Última atualização**: [Data]\n**Próxima revisão**: [Data]\n
+# 📋 Product Requirements Document (PRD)
+
+> **TEMPLATE** - Use este documento como base para criar PRDs estruturados
+
+---
+
+## 📌 Informações Básicas
+
+| Campo | Valor |
+|-------|-------|
+| **Projeto** | [Nome do Projeto] |
+| **Data de Criação** | [__/__/____] |
+| **Versão** | 1.0 |
+| **Status** | 🟡 Rascunho ou 🟢 Aprovado |
+| **Cliente** | [Nome do Cliente] |
+| **Responsável (PM)** | [Seu Nome] |
+
+---
+
+## 1️⃣ RESUMO EXECUTIVO
+
+> Leia esta seção primeiro para entender o projeto em alto nível
+
+### 🎯 Visão em Uma Frase
+
+[Uma única frase que descreve completamente o projeto]
+
+### 📊 Objetivos de Negócio
+
+- [ ] **Objetivo 1**: [Descrição]
+- [ ] **Objetivo 2**: [Descrição]
+- [ ] **Objetivo 3**: [Descrição]
+
+### ✅ Resultado Esperado
+
+Quando este projeto estiver completo:
+
+- **Usuários conseguirão**: [X]
+- **Empresa economizará**: [X]
+- **Métrica de sucesso**: [X]
+
+---
+
+## 2️⃣ CONTEXTO
+
+### 🏢 Sobre a Empresa
+
+| Aspecto | Descrição |
+|--------|-----------|
+| **Nome** | [Nome da Empresa] |
+| **Tamanho** | [Pequena/Média/Grande] - X pessoas |
+| **Indústria** | [Setor] |
+| **Mercado** | [Mercado alvo] |
+
+### 📍 Situação Atual
+
+Descreva como as coisas funcionam **HOJE**:
+
+> [Descrição detalhada do status quo]
+
+### ⏰ Por Que Agora?
+
+Por que este projeto é importante **NESTE MOMENTO**?
+
+> [Explicação da urgência e timing]
+
+---
+
+## 3️⃣ PROBLEMA
+
+### 🔴 Problema Principal
+
+[Descrição clara e específica do problema]
+
+### 📉 Impacto do Problema
+
+- **⏳ Tempo desperdiçado**: X horas/semana
+- **💰 Custo financeiro**: R$ X/mês
+- **😞 Satisfação do usuário**: X% (NPS)
+- **⚠️ Outro impacto**: [Descrição]
+
+### 🔧 Como Resolvem Hoje
+
+[Descrição da solução atual/workaround]
+
+### ❌ Por Que Não É Suficiente
+
+[Limitações da solução atual]
+
+### 👥 Usuários Afetados
+
+- **[Tipo de usuário 1]**: X pessoas
+- **[Tipo de usuário 2]**: X pessoas
+- **Total**: X pessoas
+
+---
+
+## 4️⃣ SOLUÇÃO PROPOSTA
+
+### 💡 Visão Geral
+
+[Descrição de como a solução resolveria o problema]
+
+### 🔄 Como Funciona (Fluxo Alto Nível)
+
+1. [Usuário faz X]
+2. [Sistema faz Y]
+3. [Resultado Z]
+
+### 🌟 Benefícios Principais
+
+- **Benefício 1**: [Descrição e impacto]
+- **Benefício 2**: [Descrição e impacto]
+- **Benefício 3**: [Descrição e impacto]
+
+### 🏆 Diferencial
+
+O que diferencia esta solução?
+
+| Comparação | Diferença |
+|-----------|-----------|
+| **vs Solução Atual** | [Diferença] |
+| **vs Competitor X** | [Diferença] |
+| **vs Competitor Y** | [Diferença] |
+
+---
+
+## 5️⃣ PERSONAS
+
+### 👤 Persona 1: [Nome Fictício]
+
+**📋 Perfil Demográfico**
+- Idade: XX anos
+- Profissão: [Profissão]
+- Nível técnico: [Iniciante/Intermediário/Avançado]
+- Tempo com tecnologia: [X horas/dia]
+
+**🎯 Goals (Objetivos)**
+- Objetivo 1: [Descrição]
+- Objetivo 2: [Descrição]
+
+**😣 Pain Points (Problemas)**
+- Problema 1: [Descrição]
+- Problema 2: [Descrição]
+
+**💻 Contexto de Uso**
+- Frequência: [X vezes/dia]
+- Duração: [X minutos/uso]
+- Local: [Desktop/Mobile/Tablet ou Local]
+- Ambiente: [Descrição do ambiente]
+
+**📖 Exemplo de Dia Típico**
+
+[Narrativa de como o usuário usaria a app em um dia típico]
+
+---
+
+### 👤 Persona 2: [Nome Fictício]
+
+[Repetir seção acima com dados diferentes]
+
+---
+
+### 👤 Persona 3 (Opcional): [Nome Fictício]
+
+[Repetir seção acima com dados diferentes]
+
+---
+
+## 6️⃣ FEATURES
+
+### 🚀 Features MVP (Essenciais para Lançamento)
+
+> ⚠️ Estas são as features **CRÍTICAS**. Sem elas, não lançamos.
+
+---
+
+#### ✨ Feature 1: [Nome]
+
+**📝 Descrição**:
+[O que faz]
+
+**❓ Por quê**:
+[Por que é importante]
+
+**💬 Exemplo de Uso**:
+[Como o usuário usaria]
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 2: [Nome]
+
+**📝 Descrição**: [O que faz]
+
+**❓ Por quê**: [Por que é importante]
+
+**💬 Exemplo de Uso**: [Como o usuário usaria]
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 3: [Nome]
+
+[Repetir padrão acima]
+
+---
+
+#### ✨ Features 4-10: [Nomes]
+
+[Repetir padrão acima]
+
+---
+
+### 🎁 Features Pós-MVP (Para Futuro)
+
+> 💭 Estas features são legais mas **NÃO críticas** para lançamento.
+
+---
+
+#### 🔮 Feature A: [Nome]
+
+**📝 Descrição**: [O que faz]
+
+**💡 Impacto**: [Por que seria útil]
+
+**📅 Timeline**: [Semana/Mês que planeja adicionar]
+
+---
+
+#### 🔮 Features B-Z: [Nomes]
+
+[Repetir padrão acima]
+
+---
+
+## 7️⃣ REQUISITOS TÉCNICOS
+
+### 📈 Escalabilidade (Usuários)
+
+| Período | Quantidade |
+|---------|-----------|
+| **Dia 1** | X usuários |
+| **Mês 1** | X usuários |
+| **Mês 3** | X usuários |
+| **Mês 6** | X usuários |
+
+### 🔒 Dados & Conformidade
+
+| Aspecto | Resposta |
+|--------|----------|
+| **Dados sensíveis?** | SIM / NÃO |
+| **Se sim, quais** | [Tipo de dados] |
+| **Conformidade necessária** | LGPD / GDPR / HIPAA / Nenhuma |
+
+### 📱 Plataformas
+
+- [ ] Web Desktop
+- [ ] Mobile (iOS)
+- [ ] Mobile (Android)
+- [ ] Desktop App
+
+### 🔗 Integrações
+
+- [ ] Google Workspace
+- [ ] Microsoft 365
+- [ ] Stripe/Pagamento
+- [ ] Outro: [Descrever]
+
+### ⚡ Performance
+
+| Métrica | Alvo |
+|--------|------|
+| **Disponibilidade** | X% uptime (99%, 99.9%, etc) |
+| **Tempo de resposta** | < X segundos |
+| **Conexão esperada** | 4G/WiFi/Ambas |
+
+### 🌍 Idioma
+
+| Aspecto | Descrição |
+|--------|-----------|
+| **Idioma principal** | [Português/English/Outro] |
+| **Multi-idioma necessário?** | SIM / NÃO |
+| **Se sim, quais** | [Idiomas] |
+
+---
+
+## 8️⃣ TIMELINE
+
+### 📅 Datas Importantes
+
+| Marco | Data |
+|------|------|
+| **Data de Lançamento** | [__/__/____] |
+| **Razão dessa data** | [Por que essa data?] |
+
+### 🎯 Milestones
+
+- **Milestone 1** (Data: __/__/__): [Descrição]
+- **Milestone 2** (Data: __/__/__): [Descrição]
+- **Milestone 3** (Data: __/__/__): [Descrição]
+
+### ⏱️ Duração Estimada
+
+| Fase | Duração |
+|------|---------|
+| **MVP** | X semanas |
+| **Total (com pós-MVP)** | X meses |
+
+### 🚫 Constraints
+
+- **Deadline duro?** SIM / NÃO
+- **Pode mudar de escopo?** SIM / NÃO
+
+---
+
+## 9️⃣ ORÇAMENTO (Opcional)
+
+### 💵 Faixa Orçamentária
+
+**R$ [X,XXX] - R$ [X,XXX]**
+
+### 💳 Modelo de Pagamento
+
+- [ ] Fixo (valor único)
+- [ ] Mensal (valor/mês por X meses)
+- [ ] Milestones (parcelas por conquistas)
+- [ ] Hora (valor/hora)
+
+### 📊 Custos Operacionais (Mensal)
+
+| Item | Custo |
+|------|-------|
+| **Hosting** | R$ X |
+| **Banco de dados** | R$ X |
+| **Email/Notificações** | R$ X |
+| **Outros** | R$ X |
+| **TOTAL** | **R$ X** |
+
+---
+
+## 🔟 MÉTRICAS DE SUCESSO
+
+### 🎯 Métrica Primária
+
+**[A métrica mais importante]**
+
+- **Target**: [Valor esperado]
+- **Prazo**: [Quando atingir]
+- **Importância**: 🔴 CRÍTICA
+
+### 📊 Métricas Secundárias
+
+| Métrica | Target | Prazo |
+|--------|--------|-------|
+| **Métrica 2** | [Valor] | [Quando] |
+| **Métrica 3** | [Valor] | [Quando] |
+
+### ✅ Critérios de Aceitação
+
+O projeto é considerado bem-sucedido quando:
+
+- [ ] Critério 1: [Descrição]
+- [ ] Critério 2: [Descrição]
+- [ ] Critério 3: [Descrição]
+
+---
+
+## 1️⃣1️⃣ DEPENDÊNCIAS & RISCOS
+
+### 🔗 Dependências
+
+- [ ] Acesso a dados do cliente: SIM / NÃO
+- [ ] Integrações com sistemas: SIM / NÃO
+- [ ] Aprovações regulatórias: SIM / NÃO
+- [ ] Outras: [Descrever]
+
+### ⚠️ Riscos
+
+#### Risco 1: [Descrição]
+
+- **Probabilidade**: 🟢 Baixa / 🟡 Média / 🔴 Alta
+- **Impacto**: 🟢 Baixo / 🟡 Médio / 🔴 Alto
+- **Mitigação**: [Como evitar]
+
+#### Risco 2: [Descrição]
+
+- **Probabilidade**: 🟢 Baixa / 🟡 Média / 🔴 Alta
+- **Impacto**: 🟢 Baixo / 🟡 Médio / 🔴 Alto
+- **Mitigação**: [Como evitar]
+
+---
+
+## 1️⃣2️⃣ APROVAÇÃO
+
+### 👨‍💼 Stakeholders
+
+- [ ] **Cliente**: [Nome] - Assinado em __/__/__
+- [ ] **Product Manager**: [Nome] - Assinado em __/__/__
+- [ ] **Tech Lead**: [Nome] - Assinado em __/__/__
+
+### 📋 Histórico de Versões
+
+| Versão | Data | Autor | Mudanças |
+|--------|------|-------|----------|
+| 1.0 | __/__/__ | [Nome] | Versão inicial |
+| 1.1 | __/__/__ | [Nome] | [Mudanças] |
+
+---
+
+## 📎 ANEXOS
+
+### 🔗 Referências
+
+- [Link 1]()
+- [Link 2]()
+
+### 📄 Documentos Relacionados
+
+- [Documento 1]()
+- [Documento 2]()
+
+### 🖼️ Screenshots/Mockups (Opcional)
+
+[Adicionar imagens de referência ou mockups aqui]
+
+---
+
+## 🔐 Classificação
+
+| Campo | Valor |
+|-------|-------|
+| **Classificação** | CONFIDENCIAL / INTERNO / PÚBLICO |
+| **Última atualização** | [Data] |
+| **Próxima revisão** | [Data] |

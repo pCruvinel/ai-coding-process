@@ -1,1 +1,719 @@
-# 📋 EXEMPLO: PRD - App de Rastreamento de Projetos\n\n**Projeto**: TaskFlow - Gerenciador de Projetos\n**Data**: 15/11/2024\n**Versão**: 1.2\n**Status**: 🟢 Aprovado\n**Cliente**: Acme Consulting Ltda\n**Responsável**: João Silva (PM)\n\n---\n\n## 1. RESUMO EXECUTIVO\n\n### Visão em Uma Frase\nUma aplicação web que permite que equipes de consultoria rastreiem projetos em tempo real, substituindo planilhas desorganizadas por um sistema centralizado e colaborativo.\n\n### Objetivos de Negócio\n- [ ] **Eficiência**: Economizar 20 horas/semana em tarefas administrativas\n- [ ] **Satisfação**: Reduzir erros de comunicação em 80%\n- [ ] **Crescimento**: Permitir crescimento de 50% nas operações sem aumentar staff administrativo\n\n### Resultado Esperado\nQuando este projeto estiver completo:\n- Usuários conseguirão: Gerenciar múltiplos projetos com visibilidade completa em tempo real\n- Empresa economizará: ~R$ 15.000/mês em horas não-produtivas\n- Métrica de sucesso: 100% de aderência pelos 12 gerentes de projeto em dia 30\n\n---\n\n## 2. CONTEXTO\n\n### Sobre a Empresa\n- **Nome**: Acme Consulting Ltda\n- **Tamanho**: Pequena-Média (45 pessoas)\n- **Indústria**: Consultoria de Processos Empresariais\n- **Mercado**: PMEs brasileiras\n\n### Situação Atual\nA Acme tem 8-10 projetos em andamento simultaneamente. Hoje usam:\n- **Google Sheets compartilhado**: Cada projeto tem sua planilha\n- **Problema**: Múltiplas versões, pessoas editando ao mesmo tempo, dados inconsistentes\n- **Resultado**: 2-3 horas/semana por gerente investigando discrepâncias\n- **Comunicação**: Muita comunicação via WhatsApp/email que não fica registrada\n\n### Por Que Agora?\nA empresa cresceu 40% ano passado e agora tem dificuldade em manter controle com planilhas. \nRealizaram que precisa de um sistema antes de crescer mais.\nTambém perdem clientes porque não conseguem dar visibilidade clara do progresso.\n\n---\n\n## 3. PROBLEMA\n\n### Problema Principal\nA Acme não consegue rastrear status de projetos de forma centralizada, levando a:\n- Perda de informações críticas\n- Falta de histórico de decisões\n- Retrabalho constante\n- Impossibilidade de escalar operações\n\n### Impacto do Problema\n- **Tempo desperdiçado**: 2-3 horas/semana por gerente (12 gerentes = ~36h/semana = ~R$ 7.200/semana)\n- **Custo financeiro**: ~R$ 30.000/mês em retrabalho\n- **Satisfação do cliente**: 2-3 atrasos por mês causados por miscomunicação\n- **Outro impacto**: Impossível medir produtividade por projeto\n\n### Como Resolvem Hoje\n1. Cada projeto tem um Google Sheets\n2. Planilha tem colunas: Cliente, Status, Responsável, Data de Entrega, Anotações\n3. Gerentes atualizam diariamente (teoricamente)\n4. Status enviado ao CEO via WhatsApp ou email toda sexta\n\n### Por Que Não É Suficiente\n- **Múltiplas versões**: \"Você está olhando uma versão desatualizada\"\n- **Sem histórico**: Não conseguem ver quem mudou o quê e quando\n- **Sem notificações**: Modificações não avisam interessados\n- **Difícil consultar**: Espalhar em múltiplas abas é confuso\n- **Não escala**: Adicionar campo novo é trabalhoso\n- **Sem acesso offline**: Ruim se internet cair\n- **Sem backup automático**: Já perderam dados acidentalmente\n\n### Usuários Afetados\n- **Gerentes de Projeto**: 12 pessoas (usariam TODOS OS DIAS)\n- **Diretora (Carla)**: 1 pessoa (usaria para acompanhamento estratégico)\n- **Clientes** (optional): Poderiam ter acesso visual a progresso (fase 2)\n- **Total**: 13 internos + clientes (pós-MVP)\n\n---\n\n## 4. SOLUÇÃO PROPOSTA\n\n### Visão Geral\nUma aplicação web (TaskFlow) que:\n1. Centraliza todos os projetos em um único lugar\n2. Permite colaboração em tempo real\n3. Mantém histórico de todas as mudanças\n4. Oferece visibilidade em vários níveis (gerente vê seu projeto, diretor vê tudo)\n5. Integra com Google Calendar (opcional na fase 1)\n\n### Como Funciona (Fluxo Alto Nível)\n1. **Gerente cria projeto**: Nome, cliente, datas, responsáveis\n2. **Gerente adiciona tarefas**: Cada tarefa é uma fase do projeto\n3. **Gerente atualiza status**: Arrasta tarefa entre colunas (Planejamento → Em Progresso → Concluído)\n4. **Sistema registra tudo**: Quem fez, quando fez, deixa atividade visível\n5. **Diretor vê dashboard**: Visão geral de todos os projetos em 1 tela\n\n### Benefícios Principais\n- **Eficiência**: Elimina necessidade de manter múltiplas planilhas (economia de ~3h/semana por pessoa)\n- **Transparência**: Todos veem o status real em tempo real (sem perguntar \"qual é o status?\")\n- **Histórico**: Conseguem ver quem fez cada mudança e quando (melhor para auditoria)\n- **Escalabilidade**: Sistema trabalha com 10 ou 100 projetos da mesma forma\n\n### Diferencial\n- **vs Google Sheets**: Versão única, histórico automático, permissões granulares\n- **vs Asana/Monday.com**: Mais simples (Asana é overkill), customizável para seus processos\n- **vs Jira**: Muito técnico para consultoria, interface confusa\n\n---\n\n## 5. PERSONAS\n\n### Persona 1: Carla (Diretora Executiva)\n\n**Perfil Demográfico**\n- Idade: 48 anos\n- Profissão: Diretora de Operações\n- Tech-savvy: Intermediário (usa Excel bem, não gosta de aprender coisas muito complexas)\n- Tempo com tecnologia: 2-3 horas/dia\n\n**Goals (Objetivos)**\n- Ver status de todos os projetos em um relance\n- Tomar decisões baseadas em dados de progresso\n- Entender bottlenecks e gargalos\n- Crescer o negócio de forma sustentável\n\n**Pain Points (Problemas)**\n- Gasta 45 min toda sexta colando dados de planilhas para apresentação\n- Nunca tem número definitivo (\"qual é o status real?\")\n- Não consegue prever atrasos com antecedência\n- Tem que \"nag\" gerentes por atualizações\n\n**Contexto de Uso**\n- Frequência: 1-2 vezes/dia (rápidas), mais no fim de semana quando trabalha em estratégia\n- Duração: 5-10 minutos/uso\n- Local: Desktop no escritório\n- Ambiente: Escritório, às vezes casa no fim de semana\n\n**Exemplo de Dia Típico**\n- 9h: Chega, abre TaskFlow para ver atualizações noturnas\n- 14h: Reunião com cliente, consulta TaskFlow para confirmar datas de entrega\n- 17h: Revisa se algum projeto está em risco\n- Sexta 16h: Prepara apresentação para acionista em 5 min (vs 45 min hoje)\n\n---\n\n### Persona 2: Rafael (Gerente de Projeto Sênior)\n\n**Perfil Demográfico**\n- Idade: 32 anos\n- Profissão: Gerente de Projeto\n- Tech-savvy: Avançado (já usou Jira, Asana, múltiplas ferramentas)\n- Tempo com tecnologia: 5-6 horas/dia\n\n**Goals (Objetivos)**\n- Estar organizado e não perder tarefas\n- Colaborar com time e clientes\n- Demonstrar progresso\n- Escalar para gerente sênior (impressionar Carla)\n\n**Pain Points (Problemas)**\n- Atualizar planilha é tedioso e não avisa ninguém\n- Não consegue priorizar com clareza\n- Time não usa planilha consistentemente\n- Clientes querem saber status e ele tem que exportar tudo\n\n**Contexto de Uso**\n- Frequência: 5-6 vezes/dia (ao longo do dia)\n- Duração: 3-5 minutos/uso\n- Local: Desktop no escritório, mobile durante deslocamento\n- Ambiente: Escritório, home office 2x/semana, reuniões com clientes\n\n**Exemplo de Dia Típico**\n- 9h: Daily com time usando TaskFlow no projetor\n- 11h: Cliente pergunta \"qual é o status?\", Rafael abre TaskFlow e mostra em 10 segundos\n- 14h: Tarefa finalizada, Rafael marca como concluído (1 clique, notifica interessados)\n- 17h: Revisa plano de próxima semana em TaskFlow\n\n---\n\n### Persona 3: Ana (Assistente de Projetos Júnior)\n\n**Perfil Demográfico**\n- Idade: 24 anos\n- Profissão: Assistente de Projetos\n- Tech-savvy: Iniciante (confortável com planilhas, mas não com sistemas complexos)\n- Tempo com tecnologia: 4-5 horas/dia\n\n**Goals (Objetivos)**\n- Aprender gerenciamento de projetos\n- Ajudar gerentes com tarefas administrativas\n- Fazer um bom trabalho\n\n**Pain Points (Problemas)**\n- Gerentes pedem para \"fazer uma mudança na planilha\" frequentemente\n- Não entende a importância de atualizar dados corretamente\n- Clientes ligam perguntando status, ela não sabe responder\n\n**Contexto de Uso**\n- Frequência: 3-4 vezes/dia\n- Duração: 10-15 minutos/uso\n- Local: Desktop no escritório\n- Ambiente: Escritório durante horário comercial\n\n**Exemplo de Dia Típico**\n- 10h: Rafael pede para \"atualizar a planilha com as tarefas de ontem\"\n  - Hoje: 20 min colando dados em várias células\n  - Com TaskFlow: 3 min criando/atualizando tarefas\n- 14h: Cliente liga perguntando, ela consulta TaskFlow e responde com confiança\n\n---\n\n## 6. FEATURES\n\n### Features MVP (Essenciais para Lançamento)\n\nEstas features são críticas. Sem elas, não lançamos. MVP esperado em 8 semanas.\n\n#### Feature 1: Dashboard com Visão Geral de Projetos\n**Descrição**:\nPágina inicial que mostra todos os projetos em um grid/cards. Cada projeto mostra:\n- Nome do cliente\n- Status geral (Planejamento/Em Progresso/Finalizado)\n- Responsável\n- Data de conclusão\n- % de progresso\n\n**Por quê**:\nCarla precisa ver TUDO em 10 segundos. Rafael quer visão rápida de seus projetos.\n\n**Exemplo de Uso**:\nCarla abre TaskFlow → vê 8 projetos em cards → vê que 2 estão atrasados (vermelho) → clica em um para detalhes\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 2: Detalhes do Projeto com Tarefas\n**Descrição**:\nPágina que mostra um projeto específico com:\n- Informações básicas (nome, cliente, datas, responsável)\n- Lista de tarefas/fases em colunas (Planejamento → Em Progresso → Concluído)\n- Possibilidade de arrastar tarefas entre colunas (Kanban)\n- Prazos das tarefas\n\n**Por quê**:\nRafael precisa organizar seu trabalho em fases e ver o que está em progresso.\n\n**Exemplo de Uso**:\nRafael abre projeto \"Cliente XYZ\" → vê 3 fases (Análise, Implementação, Testes) → arrasta \"Análise\" de \"Planejamento\" para \"Em Progresso\" → sistema avisa interessados\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 3: Gerenciamento de Tarefas\n**Descrição**:\n- Criar nova tarefa: Nome, descrição, responsável, data de conclusão\n- Editar tarefa: Mudar informações\n- Deletar tarefa: Remover (com confirmação)\n- Clicar em tarefa: Ver detalhes completos + histórico de mudanças\n\n**Por quê**:\nGerentes precisam criar/organizar tarefas rapidamente. Sistema deve registrar histórico.\n\n**Exemplo de Uso**:\n- Rafael cria \"Reunião com cliente\" → system envia notificação para Ana\n- Ana marca como completo → system registra \"Ana completou em 14:30\"\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 4: Filtros e Busca\n**Descrição**:\n- Filtrar projetos por status (Em Progresso, Atrasado, Concluído)\n- Filtrar por responsável (Meus Projetos, Todos os Projetos)\n- Buscar por nome do cliente/projeto\n\n**Por quê**:\nUsários querem achar informação rápido sem carregar tudo.\n\n**Exemplo de Uso**:\n- Carla clica \"Mostrar apenas ATRASADOS\" → vê 2 projetos em risco\n- Rafael busca \"Acme\" → vê 3 projetos com Acme como cliente\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 5: Sistema de Permissões\n**Descrição**:\n- **Admin (Carla)**: Vê tudo, pode editar tudo\n- **Gerente**: Vê todos os projetos, edita só seus projetos e tarefas\n- **Assistente**: Vê projetos (leitura), edita tarefas designadas (com permissão do gerente)\n\n**Por quê**:\nCada pessoa precisa de acesso diferente. Segurança.\n\n**Exemplo de Uso**:\n- Carla loga → vê TODOS os projetos\n- Rafael loga → vê projetos dele + pode editar\n- Ana loga → vê projetos (não edita) + edita tarefas designadas a ela\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 6: Histórico de Atividades\n**Descrição**:\nCada projeto mostra um feed de atividades:\n- \"Rafael criou tarefa X às 10:30\"\n- \"Ana marcou tarefa Y como concluído às 14:45\"\n- \"Sistema atualizou status para 'Atrasado' às 09:00\"\n\n**Por quê**:\nSistema de auditoria. Também ajuda a entender o que aconteceu e comunicação assíncrona.\n\n**Exemplo de Uso**:\n- Cliente reclama \"vocês disseram que terminaria segunda\"\n- Carla vê histórico e mostra: \"Status foi atualizado para 'finalizado' segunda às 17:00\"\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 7: Notificações (In-App e Email)\n**Descrição**:\n- Notificação in-app quando alguém comenta em seu projeto\n- Email resumido diário (opcional)\n- Badge mostrando quantas notificações não lidas\n\n**Por quê**:\nNinguém quer perder atualizações importantes. Hoje usam WhatsApp que é ruim.\n\n**Exemplo de Uso**:\n- Rafael muda status de tarefa → Ana recebe notificação in-app\n- Carla vê red badge no menu → sabe que tem atualizações\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 8: Autenticação e Login\n**Descrição**:\n- Login com email/senha\n- Sign-up (admin convida usuários, não open signup)\n- Recuperação de senha\n\n**Por quê**:\nSegurança e controle de quem acessa.\n\n**Exemplo de Uso**:\n- Carla convida novo gerente: carla@acme.com → sistema envia email → novo gerente clica link → cria senha\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 9: Admin Panel Básico\n**Descrição**:\n- Adicionar/remover usuários\n- Ver lista de todos os usuários e permissões\n- Simples (não muita complexidade)\n\n**Por quê**:\nCarla precisa gerenciar usuários. Hoje faz manualmente.\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n#### Feature 10: Mobile Responsivo\n**Descrição**:\n- Design responsivo para celular\n- Ver projetos e status\n- Editar tarefa (status, básico)\n- Não é nativo, mas PWA é aceitável\n\n**Por quê**:\nRafael usa celular quando está em reunião com cliente ou em deslocamento.\n\n**Prioridade**: 🔴 CRÍTICA\n\n---\n\n### Features Pós-MVP (Para Futuro)\n\nEstas features são legais mas NÃO críticas para lançamento. Planejadas para semanas 9-12+.\n\n#### Feature A: Integração Google Calendar\n**Descrição**: Sincronizar datas de tarefas com Google Calendar do usuário\n**Impacto**: Usuário não precisa manter calendário separado\n**Timeline**: Semana 10\n\n#### Feature B: Relatórios & Dashboards Analíticos\n**Descrição**: Gráficos de progresso, tempo médio de projeto, etc\n**Impacto**: Carla consegue analisar produtividade\n**Timeline**: Semana 11\n\n#### Feature C: Acesso para Clientes\n**Descrição**: Clientes podem ver progresso de SEUS projetos (leitura apenas)\n**Impacto**: Menos emails perguntando \"qual é o status?\"\n**Timeline**: Semana 12\n\n#### Feature D: Integração Slack\n**Descrição**: Notificações no Slack em vez de email\n**Impacto**: Melhor integração com ferramenta já usada\n**Timeline**: Semana 13\n\n#### Feature E: Comentários em Tarefas\n**Descrição**: Cada tarefa pode ter comentários/discussão\n**Impacto**: Comunicação centralizada por tarefa\n**Timeline**: Semana 13\n\n---\n\n## 7. REQUISITOS TÉCNICOS\n\n### Usuários\n- **Dia 1**: 13 usuários (teste)\n- **Semana 1**: 13 usuários (all staff)\n- **Mês 3**: 13-20 usuários (possível novo gerente)\n- **Mês 6**: 13-20 usuários (+ 2-3 clientes em fase 2)\n\n### Dados & Conformidade\n- **Dados sensíveis?**: SIM\n  - Nomes e emails de funcionários (LGPD)\n  - Nomes e dados de clientes (LGPD)\n  - Não há dados financeiros sensibilíssimos\n- **Conformidade necessária**: LGPD (Lei Geral de Proteção de Dados)\n  - Precisamos de: Política de privacidade, consentimento para armazenar, direito ao esquecimento\n\n### Plataformas\n- [x] Web Desktop (Principal)\n- [ ] Mobile iOS (Não prioritário, responsivo é suficiente)\n- [ ] Mobile Android (Não prioritário, responsivo é suficiente)\n- [ ] Desktop App (Não necessário)\n\n### Integrações\n- [ ] Google Workspace (Fase 2)\n- [x] Google OAuth (Fase 1 - para login)\n- [ ] Microsoft 365 (Não no MVP)\n- [x] Email (Para notificações)\n\n### Performance\n- **Disponibilidade esperada**: 99% uptime (aceitável ter 1-2h/mês de downtime)\n- **Tempo de resposta aceitável**: <2 segundos para carregar uma página\n- **Conexão esperada**: WiFi ou 4G\n- **Browsers**: Chrome, Firefox, Safari, Edge (últimas 2 versões)\n\n### Idioma\n- Idioma principal: Português Brasileiro\n- Necessário multi-idioma? NÃO (futuro possível)\n\n---\n\n## 8. TIMELINE\n\n### Datas Importantes\n- **Data de Lançamento**: 28 de Janeiro de 2025\n- **Razão dessa data**: \n  - Acme quer lançar antes de grande crescimento planejado em Fevereiro\n  - Acionista quer relatório de progresso no dia 15 de Jan (TaskFlow pronto para presentação)\n\n### Milestones\n- **Milestone 1** (Data: 10/12/2024 - Semana 2): Design aprovado + banco de dados criado\n- **Milestone 2** (Data: 24/12/2024 - Semana 4): Features 1-5 funcionando + teste com gerentes\n- **Milestone 3** (Data: 07/01/2025 - Semana 6): Features 6-10 funcionando + testes finais\n- **Milestone 4** (Data: 20/01/2025 - Semana 8): Beta testing com todos os usuários\n- **Milestone 5** (Data: 28/01/2025 - Semana 9): LANÇAMENTO 🎉\n\n### Duração Estimada\n- **MVP**: 8 semanas (28 dias de desenvolvimento intensivo)\n- **Total (com pós-MVP)**: 12 semanas planejadas (Carla quer features extras em Fevereiro)\n\n### Constraints\n- Deadline é firme? **SIM** (Acionista quer para apresentação)\n- Pode mudar de escopo? **SIM**, mas Features A-E são pós-MVP, não MVP\n- Pessoas disponíveis? Carla pode estar em reunião 50% do tempo (ajustar expectations)\n\n---\n\n## 9. ORÇAMENTO\n\n### Faixa Orçamentária\nR$ 25.000 - R$ 35.000\n\n### Modelo de Pagamento\n- [x] Milestones (33% a cada milestone)\n  - Milestone 1 (Design): R$ 10.000\n  - Milestone 3 (Features Core): R$ 10.000\n  - Milestone 5 (Lançamento): R$ 10.000-15.000 (depende de escopo final)\n\n### Custos Operacionais (Mensal)\n- **Hosting (Vercel)**: R$ 50\n- **Banco de dados (Supabase)**: R$ 100\n- **Email (SendGrid)**: R$ 50\n- **Domínio**: R$ 30\n- **Total**: R$ 230/mês (~R$ 2.760/ano)\n\n---\n\n## 10. MÉTRICAS DE SUCESSO\n\n### Métrica Primária\n**Aderência**: 100% dos 12 gerentes usando o sistema diariamente em dia 30\n\n**Target**: 100%\n**Prazo**: 30 dias após lançamento\n**Importância**: 🔴 CRÍTICA\n\nSe menos de 80% está usando, projeto falhou. Precisaremos repensar.\n\n### Métricas Secundárias\n\n**Métrica 2: Redução de Horas Administrativas**\n- **Target**: -50% (de ~36h/semana para ~18h/semana)\n- **Prazo**: 60 dias\n- **Como medir**: Survey + time tracking\n\n**Métrica 3: Satisfação de Usuários (NPS)**\n- **Target**: NPS > 50 (excelente é >70, >50 é bom)\n- **Prazo**: 30 dias\n- **Como medir**: Survey rápida (3 perguntas)\n\n**Métrica 4: Redução de Erros**\n- **Target**: 80% menos discrepâncias de dados\n- **Prazo**: 60 dias\n- **Como medir**: Auditoria antes/depois\n\n### Critérios de Aceitação\nO projeto é considerado bem-sucedido quando:\n- [ ] Nenhum usuário relatou perda de dados\n- [ ] Sistema disponível 99% do tempo (máx 43 minutos/mês de downtime)\n- [ ] Tempo de resposta média < 2 segundos\n- [ ] 100% dos gerentes conseguem fazer tarefas básicas (criar projeto, adicionar tarefa) sem treinamento\n- [ ] Carla consegue ver todos os projetos em 10 segundos no dashboard\n- [ ] Não há relatórios críticos de segurança\n\n---\n\n## 11. DEPENDÊNCIAS & RISCOS\n\n### Dependências\n- [x] Acesso a dados de clientes: Sim (precisa dos dados dos 8 projetos atuais para seed)\n- [x] Treinamento de usuários: Sim (precisa de 1-2h com cada gerente)\n- [x] Acesso aos gerentes para feedback: Sim (testing iterations)\n- [ ] Aprovações regulatórias: Não\n\n### Riscos\n\n**Risco 1: Resistência à Mudança**\n- **Probabilidade**: Média\n- **Impacto**: Alto (projeto falha se não adotam)\n- **Mitigação**: \n  - Envolver gerentes no design (fazer eles sentirem proprietários)\n  - Fazer beta testing com 2-3 gerentes antes de lançar para todos\n  - Ter \"campanha\" positiva (não forçar, mostrar benefícios)\n\n**Risco 2: Limite de Tempo**\n- **Probabilidade**: Baixa-Média\n- **Impacto**: Alto (não consegue fazer tudo)\n- **Mitigação**:\n  - MVP bem definido (apenas 10 features)\n  - Features pós-MVP explicitamente fora do escopo\n  - Planejamento agressivo com buffers\n\n**Risco 3: Dados Atuais Inconsistentes**\n- **Probabilidade**: Alta (sabemos que estão)\n- **Impacto**: Médio (limpeza inicial)\n- **Mitigação**:\n  - Planejar fase de \"data cleanup\" antes de seed\n  - Carla valida dados antes de importar\n\n---\n\n## 12. APROVAÇÃO\n\n### Stakeholders\n- [ ] **Cliente (Carla)**: Carla Santos - Assinado em __/__/__\n- [ ] **Product Manager**: João Silva - Assinado em 15/11/2024\n- [ ] **Tech Lead**: [Pendente]\n\n### Histórico de Versões\n\n| Versão | Data | Autor | Mudanças |\n|--------|------|-------|----------|\n| 1.0 | 01/11/2024 | João Silva | Versão inicial (11 features MVP) |\n| 1.1 | 10/11/2024 | João Silva | Removido 1 feature (relatórios), adicionado mobile responsivo |\n| 1.2 | 15/11/2024 | João Silva | Ajustes menores pós-feedback de Carla, timeline confirmada |\n\n---\n\n## 📎 Anexos\n\n### Referências\n- [Asana - UI Reference](https://asana.com)\n- [Trello - UI Reference](https://trello.com)\n- Google Sheets atuais (compartilhados com time)\n\n### Documentos Relacionados\n- Email de aprovação de Carla (15/11/2024)\n- Brainstorm notes (10/11/2024)\n\n### Screenshots/Mockups\n[Será adicionado após design estar pronto]\n\n---\n\n**Documento classificado como**: CONFIDENCIAL (Acme Consulting Ltda)\n**Última atualização**: 15/11/2024\n**Próxima revisão**: 01/12/2024 (pré-milestone 1)\n"
+# 📋 TaskFlow - PRD Exemplo
+
+> **EXEMPLO REAL** - Veja como preencher o template com dados práticos
+
+---
+
+## 📌 Informações Básicas
+
+| Campo | Valor |
+|-------|-------|
+| **Projeto** | TaskFlow - Gerenciador de Projetos |
+| **Data de Criação** | 15/11/2024 |
+| **Versão** | 1.2 |
+| **Status** | 🟢 Aprovado |
+| **Cliente** | Acme Consulting Ltda |
+| **Responsável (PM)** | João Silva |
+
+---
+
+## 1️⃣ RESUMO EXECUTIVO
+
+> 🎯 O essencial do projeto em uma página
+
+### 🎯 Visão em Uma Frase
+
+Uma aplicação web que permite que equipes de consultoria rastreiem projetos em tempo real, substituindo planilhas desorganizadas por um sistema centralizado e colaborativo.
+
+### 📊 Objetivos de Negócio
+
+- [x] **Eficiência**: Economizar 20 horas/semana em tarefas administrativas
+- [x] **Satisfação**: Reduzir erros de comunicação em 80%
+- [x] **Crescimento**: Permitir crescimento de 50% nas operações sem aumentar staff administrativo
+
+### ✅ Resultado Esperado
+
+Quando este projeto estiver completo:
+
+- **Usuários conseguirão**: Gerenciar múltiplos projetos com visibilidade completa em tempo real
+- **Empresa economizará**: ~R$ 15.000/mês em horas não-produtivas
+- **Métrica de sucesso**: 100% de aderência pelos 12 gerentes de projeto em dia 30
+
+---
+
+## 2️⃣ CONTEXTO
+
+### 🏢 Sobre a Empresa
+
+| Aspecto | Descrição |
+|--------|-----------|
+| **Nome** | Acme Consulting Ltda |
+| **Tamanho** | Pequena-Média (45 pessoas) |
+| **Indústria** | Consultoria de Processos Empresariais |
+| **Mercado** | PMEs brasileiras |
+
+### 📍 Situação Atual
+
+A Acme tem 8-10 projetos em andamento simultaneamente. Hoje usam:
+
+- **Google Sheets compartilhado**: Cada projeto tem sua planilha
+- **Problema**: Múltiplas versões, pessoas editando ao mesmo tempo, dados inconsistentes
+- **Resultado**: 2-3 horas/semana por gerente investigando discrepâncias
+- **Comunicação**: Muita comunicação via WhatsApp/email que não fica registrada
+
+### ⏰ Por Que Agora?
+
+> A empresa cresceu 40% ano passado e agora tem dificuldade em manter controle com planilhas. Realizaram que precisa de um sistema antes de crescer mais. Também perdem clientes porque não conseguem dar visibilidade clara do progresso.
+
+---
+
+## 3️⃣ PROBLEMA
+
+### 🔴 Problema Principal
+
+A Acme não consegue rastrear status de projetos de forma centralizada, levando a:
+
+- Perda de informações críticas
+- Falta de histórico de decisões
+- Retrabalho constante
+- Impossibilidade de escalar operações
+
+### 📉 Impacto do Problema
+
+- **⏳ Tempo desperdiçado**: 2-3 horas/semana por gerente (12 gerentes = ~36h/semana = ~R$ 7.200/semana)
+- **💰 Custo financeiro**: ~R$ 30.000/mês em retrabalho
+- **😞 Satisfação do cliente**: 2-3 atrasos por mês causados por miscomunicação
+- **⚠️ Outro impacto**: Impossível medir produtividade por projeto
+
+### 🔧 Como Resolvem Hoje
+
+1. Cada projeto tem um Google Sheets
+2. Planilha tem colunas: Cliente, Status, Responsável, Data de Entrega, Anotações
+3. Gerentes atualizam diariamente (teoricamente)
+4. Status enviado ao CEO via WhatsApp ou email toda sexta
+
+### ❌ Por Que Não É Suficiente
+
+- **Múltiplas versões**: "Você está olhando uma versão desatualizada"
+- **Sem histórico**: Não conseguem ver quem mudou o quê e quando
+- **Sem notificações**: Modificações não avisam interessados
+- **Difícil consultar**: Espalhar em múltiplas abas é confuso
+- **Não escala**: Adicionar campo novo é trabalhoso
+- **Sem acesso offline**: Ruim se internet cair
+- **Sem backup automático**: Já perderam dados acidentalmente
+
+### 👥 Usuários Afetados
+
+- **Gerentes de Projeto**: 12 pessoas (usariam TODOS OS DIAS)
+- **Diretora (Carla)**: 1 pessoa (usaria para acompanhamento estratégico)
+- **Clientes** (opcional): Poderiam ter acesso visual a progresso (fase 2)
+- **Total**: 13 internos + clientes (pós-MVP)
+
+---
+
+## 4️⃣ SOLUÇÃO PROPOSTA
+
+### 💡 Visão Geral
+
+Uma aplicação web (TaskFlow) que:
+
+1. Centraliza todos os projetos em um único lugar
+2. Permite colaboração em tempo real
+3. Mantém histórico de todas as mudanças
+4. Oferece visibilidade em vários níveis (gerente vê seu projeto, diretor vê tudo)
+5. Integra com Google Calendar (opcional na fase 1)
+
+### 🔄 Como Funciona (Fluxo Alto Nível)
+
+1. **Gerente cria projeto**: Nome, cliente, datas, responsáveis
+2. **Gerente adiciona tarefas**: Cada tarefa é uma fase do projeto
+3. **Gerente atualiza status**: Arrasta tarefa entre colunas (Planejamento → Em Progresso → Concluído)
+4. **Sistema registra tudo**: Quem fez, quando fez, deixa atividade visível
+5. **Diretor vê dashboard**: Visão geral de todos os projetos em 1 tela
+
+### 🌟 Benefícios Principais
+
+- **Eficiência**: Elimina necessidade de manter múltiplas planilhas (economia de ~3h/semana por pessoa)
+- **Transparência**: Todos veem o status real em tempo real (sem perguntar "qual é o status?")
+- **Histórico**: Conseguem ver quem fez cada mudança e quando (melhor para auditoria)
+- **Escalabilidade**: Sistema trabalha com 10 ou 100 projetos da mesma forma
+
+### 🏆 Diferencial
+
+| Comparação | Diferença |
+|-----------|-----------|
+| **vs Google Sheets** | Versão única, histórico automático, permissões granulares |
+| **vs Asana/Monday.com** | Mais simples (Asana é overkill), customizável para seus processos |
+| **vs Jira** | Muito técnico para consultoria, interface confusa |
+
+---
+
+## 5️⃣ PERSONAS
+
+### 👤 Persona 1: Carla (Diretora Executiva)
+
+**📋 Perfil Demográfico**
+- Idade: 48 anos
+- Profissão: Diretora de Operações
+- Nível técnico: Intermediário (usa Excel bem, não gosta de aprender coisas muito complexas)
+- Tempo com tecnologia: 2-3 horas/dia
+
+**🎯 Goals (Objetivos)**
+- Ver status de todos os projetos em um relance
+- Tomar decisões baseadas em dados de progresso
+- Entender bottlenecks e gargalos
+- Crescer o negócio de forma sustentável
+
+**😣 Pain Points (Problemas)**
+- Gasta 45 min toda sexta colando dados de planilhas para apresentação
+- Nunca tem número definitivo ("qual é o status real?")
+- Não consegue prever atrasos com antecedência
+- Tem que "nag" gerentes por atualizações
+
+**💻 Contexto de Uso**
+- Frequência: 1-2 vezes/dia (rápidas), mais no fim de semana quando trabalha em estratégia
+- Duração: 5-10 minutos/uso
+- Local: Desktop no escritório
+- Ambiente: Escritório, às vezes casa no fim de semana
+
+**📖 Exemplo de Dia Típico**
+- **9h**: Chega, abre TaskFlow para ver atualizações noturnas
+- **14h**: Reunião com cliente, consulta TaskFlow para confirmar datas de entrega
+- **17h**: Revisa se algum projeto está em risco
+- **Sexta 16h**: Prepara apresentação para acionista em 5 min (vs 45 min hoje)
+
+---
+
+### 👤 Persona 2: Rafael (Gerente de Projeto Sênior)
+
+**📋 Perfil Demográfico**
+- Idade: 32 anos
+- Profissão: Gerente de Projeto
+- Nível técnico: Avançado (já usou Jira, Asana, múltiplas ferramentas)
+- Tempo com tecnologia: 5-6 horas/dia
+
+**🎯 Goals (Objetivos)**
+- Estar organizado e não perder tarefas
+- Colaborar com time e clientes
+- Demonstrar progresso
+- Escalar para gerente sênior (impressionar Carla)
+
+**😣 Pain Points (Problemas)**
+- Atualizar planilha é tedioso e não avisa ninguém
+- Não consegue priorizar com clareza
+- Time não usa planilha consistentemente
+- Clientes querem saber status e ele tem que exportar tudo
+
+**💻 Contexto de Uso**
+- Frequência: 5-6 vezes/dia (ao longo do dia)
+- Duração: 3-5 minutos/uso
+- Local: Desktop no escritório, mobile durante deslocamento
+- Ambiente: Escritório, home office 2x/semana, reuniões com clientes
+
+**📖 Exemplo de Dia Típico**
+- **9h**: Daily com time usando TaskFlow no projetor
+- **11h**: Cliente pergunta "qual é o status?", Rafael abre TaskFlow e mostra em 10 segundos
+- **14h**: Tarefa finalizada, Rafael marca como concluído (1 clique, notifica interessados)
+- **17h**: Revisa plano de próxima semana em TaskFlow
+
+---
+
+### 👤 Persona 3: Ana (Assistente de Projetos Júnior)
+
+**📋 Perfil Demográfico**
+- Idade: 24 anos
+- Profissão: Assistente de Projetos
+- Nível técnico: Iniciante (confortável com planilhas, mas não com sistemas complexos)
+- Tempo com tecnologia: 4-5 horas/dia
+
+**🎯 Goals (Objetivos)**
+- Aprender gerenciamento de projetos
+- Ajudar gerentes com tarefas administrativas
+- Fazer um bom trabalho
+
+**😣 Pain Points (Problemas)**
+- Gerentes pedem para "fazer uma mudança na planilha" frequentemente
+- Não entende a importância de atualizar dados corretamente
+- Clientes ligam perguntando status, ela não sabe responder
+
+**💻 Contexto de Uso**
+- Frequência: 3-4 vezes/dia
+- Duração: 10-15 minutos/uso
+- Local: Desktop no escritório
+- Ambiente: Escritório durante horário comercial
+
+**📖 Exemplo de Dia Típico**
+- **10h**: Rafael pede para "atualizar a planilha com as tarefas de ontem"
+  - *Hoje*: 20 min colando dados em várias células
+  - *Com TaskFlow*: 3 min criando/atualizando tarefas
+- **14h**: Cliente liga perguntando, ela consulta TaskFlow e responde com confiança
+
+---
+
+## 6️⃣ FEATURES
+
+### 🚀 Features MVP (Essenciais para Lançamento)
+
+> ⚠️ Estas features são críticas. Sem elas, **não lançamos**. MVP esperado em **8 semanas**.
+
+---
+
+#### ✨ Feature 1: Dashboard com Visão Geral de Projetos
+
+**📝 Descrição**:
+Página inicial que mostra todos os projetos em um grid/cards. Cada projeto mostra:
+- Nome do cliente
+- Status geral (Planejamento/Em Progresso/Finalizado)
+- Responsável
+- Data de conclusão
+- % de progresso
+
+**❓ Por quê**:
+Carla precisa ver TUDO em 10 segundos. Rafael quer visão rápida de seus projetos.
+
+**💬 Exemplo de Uso**:
+Carla abre TaskFlow → vê 8 projetos em cards → vê que 2 estão atrasados (vermelho) → clica em um para detalhes
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 2: Detalhes do Projeto com Tarefas
+
+**📝 Descrição**:
+Página que mostra um projeto específico com:
+- Informações básicas (nome, cliente, datas, responsável)
+- Lista de tarefas/fases em colunas (Planejamento → Em Progresso → Concluído)
+- Possibilidade de arrastar tarefas entre colunas (Kanban)
+- Prazos das tarefas
+
+**❓ Por quê**:
+Rafael precisa organizar seu trabalho em fases e ver o que está em progresso.
+
+**💬 Exemplo de Uso**:
+Rafael abre projeto "Cliente XYZ" → vê 3 fases (Análise, Implementação, Testes) → arrasta "Análise" de "Planejamento" para "Em Progresso" → sistema avisa interessados
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 3: Gerenciamento de Tarefas
+
+**📝 Descrição**:
+- Criar nova tarefa: Nome, descrição, responsável, data de conclusão
+- Editar tarefa: Mudar informações
+- Deletar tarefa: Remover (com confirmação)
+- Clicar em tarefa: Ver detalhes completos + histórico de mudanças
+
+**❓ Por quê**:
+Gerentes precisam criar/organizar tarefas rapidamente. Sistema deve registrar histórico.
+
+**💬 Exemplo de Uso**:
+- Rafael cria "Reunião com cliente" → system envia notificação para Ana
+- Ana marca como completo → system registra "Ana completou em 14:30"
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 4: Filtros e Busca
+
+**📝 Descrição**:
+- Filtrar projetos por status (Em Progresso, Atrasado, Concluído)
+- Filtrar por responsável (Meus Projetos, Todos os Projetos)
+- Buscar por nome do cliente/projeto
+
+**❓ Por quê**:
+Usuários querem achar informação rápido sem carregar tudo.
+
+**💬 Exemplo de Uso**:
+- Carla clica "Mostrar apenas ATRASADOS" → vê 2 projetos em risco
+- Rafael busca "Acme" → vê 3 projetos com Acme como cliente
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 5: Sistema de Permissões
+
+**📝 Descrição**:
+- **Admin (Carla)**: Vê tudo, pode editar tudo
+- **Gerente**: Vê todos os projetos, edita só seus projetos e tarefas
+- **Assistente**: Vê projetos (leitura), edita tarefas designadas (com permissão do gerente)
+
+**❓ Por quê**:
+Cada pessoa precisa de acesso diferente. Segurança.
+
+**💬 Exemplo de Uso**:
+- Carla loga → vê TODOS os projetos
+- Rafael loga → vê projetos dele + pode editar
+- Ana loga → vê projetos (não edita) + edita tarefas designadas a ela
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 6: Histórico de Atividades
+
+**📝 Descrição**:
+Cada projeto mostra um feed de atividades:
+- "Rafael criou tarefa X às 10:30"
+- "Ana marcou tarefa Y como concluído às 14:45"
+- "Sistema atualizou status para 'Atrasado' às 09:00"
+
+**❓ Por quê**:
+Sistema de auditoria. Também ajuda a entender o que aconteceu e comunicação assíncrona.
+
+**💬 Exemplo de Uso**:
+- Cliente reclama "vocês disseram que terminaria segunda"
+- Carla vê histórico e mostra: "Status foi atualizado para 'finalizado' segunda às 17:00"
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 7: Notificações (In-App e Email)
+
+**📝 Descrição**:
+- Notificação in-app quando alguém comenta em seu projeto
+- Email resumido diário (opcional)
+- Badge mostrando quantas notificações não lidas
+
+**❓ Por quê**:
+Ninguém quer perder atualizações importantes. Hoje usam WhatsApp que é ruim.
+
+**💬 Exemplo de Uso**:
+- Rafael muda status de tarefa → Ana recebe notificação in-app
+- Carla vê red badge no menu → sabe que tem atualizações
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 8: Autenticação e Login
+
+**📝 Descrição**:
+- Login com email/senha
+- Sign-up (admin convida usuários, não open signup)
+- Recuperação de senha
+
+**❓ Por quê**:
+Segurança e controle de quem acessa.
+
+**💬 Exemplo de Uso**:
+- Carla convida novo gerente: carla@acme.com → sistema envia email → novo gerente clica link → cria senha
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 9: Admin Panel Básico
+
+**📝 Descrição**:
+- Adicionar/remover usuários
+- Ver lista de todos os usuários e permissões
+- Simples (não muita complexidade)
+
+**❓ Por quê**:
+Carla precisa gerenciar usuários. Hoje faz manualmente.
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+#### ✨ Feature 10: Mobile Responsivo
+
+**📝 Descrição**:
+- Design responsivo para celular
+- Ver projetos e status
+- Editar tarefa (status, básico)
+- Não é nativo, mas PWA é aceitável
+
+**❓ Por quê**:
+Rafael usa celular quando está em reunião com cliente ou em deslocamento.
+
+**🔴 Prioridade**: CRÍTICA
+
+---
+
+### 🎁 Features Pós-MVP (Para Futuro)
+
+> 💭 Estas features são legais mas **NÃO críticas** para lançamento. Planejadas para semanas 9-12+.
+
+---
+
+#### 🔮 Feature A: Integração Google Calendar
+
+**📝 Descrição**: Sincronizar datas de tarefas com Google Calendar do usuário
+
+**💡 Impacto**: Usuário não precisa manter calendário separado
+
+**📅 Timeline**: Semana 10
+
+---
+
+#### 🔮 Feature B: Relatórios & Dashboards Analíticos
+
+**📝 Descrição**: Gráficos de progresso, tempo médio de projeto, etc
+
+**💡 Impacto**: Carla consegue analisar produtividade
+
+**📅 Timeline**: Semana 11
+
+---
+
+#### 🔮 Feature C: Acesso para Clientes
+
+**📝 Descrição**: Clientes podem ver progresso de SEUS projetos (leitura apenas)
+
+**💡 Impacto**: Menos emails perguntando "qual é o status?"
+
+**📅 Timeline**: Semana 12
+
+---
+
+#### 🔮 Feature D: Integração Slack
+
+**📝 Descrição**: Notificações no Slack em vez de email
+
+**💡 Impacto**: Melhor integração com ferramenta já usada
+
+**📅 Timeline**: Semana 13
+
+---
+
+#### 🔮 Feature E: Comentários em Tarefas
+
+**📝 Descrição**: Cada tarefa pode ter comentários/discussão
+
+**💡 Impacto**: Comunicação centralizada por tarefa
+
+**📅 Timeline**: Semana 13
+
+---
+
+## 7️⃣ REQUISITOS TÉCNICOS
+
+### 📈 Escalabilidade (Usuários)
+
+| Período | Quantidade |
+|---------|-----------|
+| **Dia 1** | 13 usuários (teste) |
+| **Semana 1** | 13 usuários (all staff) |
+| **Mês 3** | 13-20 usuários (possível novo gerente) |
+| **Mês 6** | 13-20 usuários (+ 2-3 clientes em fase 2) |
+
+### 🔒 Dados & Conformidade
+
+| Aspecto | Resposta |
+|--------|----------|
+| **Dados sensíveis?** | ✅ SIM |
+| **Se sim, quais** | Nomes e emails de funcionários (LGPD) + Nomes e dados de clientes (LGPD) |
+| **Conformidade necessária** | LGPD (Lei Geral de Proteção de Dados) |
+| **Requisitos** | Política de privacidade, consentimento para armazenar, direito ao esquecimento |
+
+### 📱 Plataformas
+
+- [x] **Web Desktop** (Principal)
+- [ ] Mobile iOS (Responsivo é suficiente)
+- [ ] Mobile Android (Responsivo é suficiente)
+- [ ] Desktop App (Não necessário)
+
+### 🔗 Integrações
+
+- [x] **Google OAuth** (Fase 1 - para login)
+- [x] **Email** (Para notificações)
+- [ ] Google Workspace (Fase 2)
+- [ ] Microsoft 365 (Não no MVP)
+
+### ⚡ Performance
+
+| Métrica | Alvo |
+|--------|------|
+| **Disponibilidade** | 99% uptime (aceitável ter 1-2h/mês de downtime) |
+| **Tempo de resposta** | <2 segundos para carregar uma página |
+| **Conexão esperada** | WiFi ou 4G |
+| **Browsers** | Chrome, Firefox, Safari, Edge (últimas 2 versões) |
+
+### 🌍 Idioma
+
+| Aspecto | Descrição |
+|--------|-----------|
+| **Idioma principal** | Português Brasileiro |
+| **Multi-idioma necessário?** | NÃO (futuro possível) |
+
+---
+
+## 8️⃣ TIMELINE
+
+### 📅 Datas Importantes
+
+| Marco | Data | Motivo |
+|------|------|--------|
+| **Data de Lançamento** | 28 de Janeiro de 2025 | Acme quer lançar antes de grande crescimento em Fevereiro |
+| **Apresentação Acionista** | 15 de Janeiro de 2025 | TaskFlow pronto para demonstração |
+
+### 🎯 Milestones
+
+- **Milestone 1** (10/12/2024 - Semana 2): Design aprovado + banco de dados criado
+- **Milestone 2** (24/12/2024 - Semana 4): Features 1-5 funcionando + teste com gerentes
+- **Milestone 3** (07/01/2025 - Semana 6): Features 6-10 funcionando + testes finais
+- **Milestone 4** (20/01/2025 - Semana 8): Beta testing com todos os usuários
+- **Milestone 5** (28/01/2025 - Semana 9): 🎉 **LANÇAMENTO**
+
+### ⏱️ Duração Estimada
+
+| Fase | Duração |
+|------|---------|
+| **MVP** | 8 semanas (28 dias de desenvolvimento intensivo) |
+| **Total (com pós-MVP)** | 12 semanas planejadas (Carla quer features extras em Fevereiro) |
+
+### 🚫 Constraints
+
+- **Deadline firme?** ✅ **SIM** (Acionista quer para apresentação)
+- **Pode mudar de escopo?** ✅ **SIM**, mas Features A-E são pós-MVP, não MVP
+- **Pessoas disponíveis?** Carla pode estar em reunião 50% do tempo (ajustar expectations)
+
+---
+
+## 9️⃣ ORÇAMENTO
+
+### 💵 Faixa Orçamentária
+
+**R$ 25.000 - R$ 35.000**
+
+### 💳 Modelo de Pagamento
+
+- [x] **Milestones** (33% a cada milestone)
+  - Milestone 1 (Design): R$ 10.000
+  - Milestone 3 (Features Core): R$ 10.000
+  - Milestone 5 (Lançamento): R$ 10.000-15.000 (depende de escopo final)
+
+### 📊 Custos Operacionais (Mensal)
+
+| Item | Custo |
+|------|-------|
+| **Hosting (Vercel)** | R$ 50 |
+| **Banco de dados (Supabase)** | R$ 100 |
+| **Email (SendGrid)** | R$ 50 |
+| **Domínio** | R$ 30 |
+| **TOTAL** | **R$ 230/mês** (~R$ 2.760/ano) |
+
+---
+
+## 🔟 MÉTRICAS DE SUCESSO
+
+### 🎯 Métrica Primária
+
+**Aderência: 100% dos 12 gerentes usando o sistema diariamente em dia 30**
+
+- **Target**: 100%
+- **Prazo**: 30 dias após lançamento
+- **Importância**: 🔴 CRÍTICA
+
+> Se menos de 80% está usando, projeto falhou. Precisaremos repensar.
+
+### 📊 Métricas Secundárias
+
+| Métrica | Target | Prazo | Como Medir |
+|--------|--------|-------|-----------|
+| **Redução de Horas Administrativas** | -50% (36h → 18h/semana) | 60 dias | Survey + time tracking |
+| **Satisfação (NPS)** | > 50 | 30 dias | Survey rápida (3 perguntas) |
+| **Redução de Erros** | 80% menos discrepâncias | 60 dias | Auditoria antes/depois |
+
+### ✅ Critérios de Aceitação
+
+O projeto é considerado bem-sucedido quando:
+
+- [ ] Nenhum usuário relatou perda de dados
+- [ ] Sistema disponível 99% do tempo (máx 43 minutos/mês de downtime)
+- [ ] Tempo de resposta média < 2 segundos
+- [ ] 100% dos gerentes conseguem fazer tarefas básicas sem treinamento
+- [ ] Carla consegue ver todos os projetos em 10 segundos no dashboard
+- [ ] Não há relatórios críticos de segurança
+
+---
+
+## 1️⃣1️⃣ DEPENDÊNCIAS & RISCOS
+
+### 🔗 Dependências
+
+- [x] **Acesso a dados de clientes**: Sim (precisa dos dados dos 8 projetos atuais para seed)
+- [x] **Treinamento de usuários**: Sim (precisa de 1-2h com cada gerente)
+- [x] **Acesso aos gerentes para feedback**: Sim (testing iterations)
+- [ ] Aprovações regulatórias: Não
+
+### ⚠️ Riscos
+
+#### Risco 1: Resistência à Mudança
+
+- **Probabilidade**: 🟡 Média
+- **Impacto**: 🔴 Alto (projeto falha se não adotam)
+- **Mitigação**:
+  - Envolver gerentes no design (fazer eles sentirem proprietários)
+  - Fazer beta testing com 2-3 gerentes antes de lançar para todos
+  - Ter "campanha" positiva (não forçar, mostrar benefícios)
+
+#### Risco 2: Limite de Tempo
+
+- **Probabilidade**: 🟡 Baixa-Média
+- **Impacto**: 🔴 Alto (não consegue fazer tudo)
+- **Mitigação**:
+  - MVP bem definido (apenas 10 features)
+  - Features pós-MVP explicitamente fora do escopo
+  - Planejamento agressivo com buffers
+
+#### Risco 3: Dados Atuais Inconsistentes
+
+- **Probabilidade**: 🔴 Alta (sabemos que estão)
+- **Impacto**: 🟡 Médio (limpeza inicial)
+- **Mitigação**:
+  - Planejar fase de "data cleanup" antes de seed
+  - Carla valida dados antes de importar
+
+---
+
+## 1️⃣2️⃣ APROVAÇÃO
+
+### 👨‍💼 Stakeholders
+
+- [ ] **Cliente (Carla)**: Carla Santos - Assinado em __/__/__
+- [x] **Product Manager**: João Silva - Assinado em 15/11/2024
+- [ ] **Tech Lead**: [Pendente]
+
+### 📋 Histórico de Versões
+
+| Versão | Data | Autor | Mudanças |
+|--------|------|-------|----------|
+| 1.0 | 01/11/2024 | João Silva | Versão inicial (11 features MVP) |
+| 1.1 | 10/11/2024 | João Silva | Removido 1 feature (relatórios), adicionado mobile responsivo |
+| 1.2 | 15/11/2024 | João Silva | Ajustes menores pós-feedback de Carla, timeline confirmada |
+
+---
+
+## 📎 ANEXOS
+
+### 🔗 Referências
+
+- [Asana - UI Reference](https://asana.com)
+- [Trello - UI Reference](https://trello.com)
+- Google Sheets atuais (compartilhados com time)
+
+### 📄 Documentos Relacionados
+
+- Email de aprovação de Carla (15/11/2024)
+- Brainstorm notes (10/11/2024)
+
+### 🖼️ Screenshots/Mockups
+
+[Será adicionado após design estar pronto]
+
+---
+
+## 🔐 Classificação
+
+| Campo | Valor |
+|-------|-------|
+| **Classificação** | CONFIDENCIAL (Acme Consulting Ltda) |
+| **Última atualização** | 15/11/2024 |
+| **Próxima revisão** | 01/12/2024 (pré-milestone 1) |
