@@ -18,11 +18,20 @@ Antes de escrever uma única linha de código, você precisa entender completame
 
 ## 📂 Arquivos Nesta Fase
 
-- [`checklist.md`](./checklist.md) - Checklist completo
+### Arquivos Principais
+- [`prd.md`](./prd.md) - **SEU PRD** (preencha este arquivo)
+- [`template-prd.md`](./template-prd.md) - Template completo do PRD
+- [`exemplo-prd.md`](./exemplo-prd.md) - Exemplo de PRD preenchido
+
+### Guias e Instruções
 - [`guia-entrevista.md`](./guia-entrevista.md) - Como conduzir a entrevista
-- [`prompt-entrevista.md`](./prompt-entrevista.md) - Prompt para Claude
-- [`template-prd.md`](./template-prd.md) - Template do PRD
-- [`exemplo-prd.md`](./exemplo-prd.md) - Exemplo pronto
+- [`prompt-entrevista.md`](./prompt-entrevista.md) - Prompt para Claude conduzir entrevista
+- [`guia-qualidade-prd.md`](./guia-qualidade-prd.md) - Como avaliar qualidade do PRD
+
+### Recursos Complementares
+- [`checklist.md`](./checklist.md) - Checklist completo da fase
+- [`faq.md`](./faq.md) - Perguntas frequentes
+- [`template-email-follow-up.md`](./template-email-follow-up.md) - Templates de comunicação
 
 ## 🔄 Fluxo da Fase
 
@@ -72,13 +81,17 @@ Antes de escrever uma única linha de código, você precisa entender completame
 1. Cole este prompt no Claude: [`prompt-entrevista.md`](./prompt-entrevista.md)
 2. Siga as instruções do Claude
 3. Claude gerará um PRD inicial
-4. Revise com o cliente
+4. Cole o resultado em [`prd.md`](./prd.md)
+5. Revise com o cliente
+6. Use o [`guia-qualidade-prd.md`](./guia-qualidade-prd.md) para validar
 
 ### Opção 2: Manual
 1. Use [`guia-entrevista.md`](./guia-entrevista.md)
 2. Conduza a entrevista pessoalmente
-3. Use [`template-prd.md`](./template-prd.md)
-4. Escreva o PRD
+3. Copie o [`template-prd.md`](./template-prd.md) para [`prd.md`](./prd.md)
+4. Preencha cada seção
+5. Use o [`guia-qualidade-prd.md`](./guia-qualidade-prd.md) para validar
+6. Envie para cliente usando templates de [`template-email-follow-up.md`](./template-email-follow-up.md)
 
 ## 📚 O Que Você Precisa Saber
 
@@ -108,6 +121,8 @@ Representações fictícias dos usuários:
 - ✅ Documentar TUDO
 - ✅ Ser específico (não genérico)
 - ✅ Focar no problema, não na solução
+- ✅ Usar o [`guia-qualidade-prd.md`](./guia-qualidade-prd.md) antes de finalizar
+- ✅ Conseguir aprovação por escrito
 
 ### ❌ Evitar
 - ❌ Assumir sem perguntar
@@ -115,6 +130,14 @@ Representações fictícias dos usuários:
 - ❌ Prometer muito (MVP focado)
 - ❌ Ignorar requisitos não-funcionais
 - ❌ Escopo aberto
+- ❌ Prosseguir sem aprovação do cliente
+
+### 📧 Comunicação
+Use os templates em [`template-email-follow-up.md`](./template-email-follow-up.md) para:
+- Enviar PRD para revisão
+- Follow-up se cliente não responder
+- Pedir aprovação formal
+- Gerenciar mudanças de escopo
 
 ## 🎓 Exemplo Prático
 
@@ -122,14 +145,27 @@ Veja [`exemplo-prd.md`](./exemplo-prd.md) para um exemplo completo de PRD.
 
 ## ✅ Quando Você Sabe que Está Pronto
 
-Você completou esta fase quando:
+### Checklist Rápido de Conclusão
 
-- [ ] Pode responder todas as perguntas do PRD
-- [ ] O cliente viu e aprovou o PRD
-- [ ] Tem pelo menos 2-3 personas definidas
+- [ ] [`prd.md`](./prd.md) está completo (sem placeholders)
+- [ ] PRD passa no [`guia-qualidade-prd.md`](./guia-qualidade-prd.md) com ≥70 pontos
+- [ ] O cliente viu e aprovou o PRD por escrito
+- [ ] Tem pelo menos 2-3 personas bem definidas
 - [ ] Consegue listar 5-10 features MVP claramente
-- [ ] Documentação está clara e sem ambiguidades
-- [ ] Timeline e budget estão realistas
+- [ ] Timeline e budget estão realistas e acordados
+- [ ] Consegue fazer "pitch de elevador" do projeto em 2 min
+- [ ] Todos os itens do [`checklist.md`](./checklist.md) estão completos
+
+### Teste Final
+
+Use o teste do "Pitch de Elevador" no [`guia-qualidade-prd.md`](./guia-qualidade-prd.md):
+- Consegue responder as 5 perguntas em 30 segundos cada?
+- Se SIM → Pronto! 🎉
+- Se NÃO → Revise o PRD
+
+### Perguntas Frequentes?
+
+Consulte o [`faq.md`](./faq.md) para dúvidas comuns
 
 ## 🔗 Próxima Etapa
 
