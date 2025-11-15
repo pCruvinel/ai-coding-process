@@ -2,125 +2,184 @@
 
 ## Visão Geral
 
-Configurar o ambiente local e preparar o repositório para desenvolvimento backend. Esta fase faz a ponte entre o design frontend (Lovable/v0) e o desenvolvimento backend com Next.js + Supabase.
+Preparar o ambiente de desenvolvimento com **Claude Code** para começar o backend. Esta fase foca em usar IA para configurar o projeto, não em instalação manual.
 
-**Duração estimada**: 1-2 dias
-**Responsável**: Tech Lead / Developer
-**Pré-requisito**: Fase 0 (PRD aprovado) e Fase 1 (Design finalizado)
+**Duração estimada**: 1 dia (via Claude Code)
+**Responsável**: Developer + Claude Code
+**Pré-requisito**: Fase 1 concluída (design exportado)
 
 ## 🎯 Objetivos
 
-1. Clonar/criar repositório Git
-2. Instalar Next.js com Tailwind CSS v3 e TypeScript
-3. Configurar ESLint, Prettier e tooling
-4. Preparar integração com Supabase
-5. Criar estrutura de pastas padrão
-6. Validar setup com testes locais
-7. Realizar primeiro commit
+1. Usar Claude Code para configurar o repositório
+2. Validar código exportado da Fase 1
+3. Preparar estrutura de pastas para backend
+4. Configurar ferramentas de desenvolvimento
+5. Primeiro commit e push para GitHub
 
 ## 📂 Arquivos Nesta Fase
 
 ### Guias Principais
-- [`guia-setup.md`](./guia-setup.md) - **Guia passo a passo** de instalação e configuração
-- [`estrutura-pastas.md`](./estrutura-pastas.md) - Estrutura de pastas detalhada com exemplos
-- [`checklist.md`](./checklist.md) - Checklist completo de todas as etapas
+- [`checklist.md`](./checklist.md) - Checklist completo
+- [`estrutura-pastas.md`](./estrutura-pastas.md) - Estrutura de pastas padrão
+- [`template-env.md`](./template-env.md) - Template de variáveis de ambiente
 
 ### Recursos Complementares
-- [`faq.md`](./faq.md) - Perguntas frequentes e troubleshooting
-- [`template-env.md`](./template-env.md) - Template de variáveis de ambiente
-- [`comandos-uteis.md`](./comandos-uteis.md) - Comandos úteis do dia a dia
+- [`comandos-uteis.md`](./comandos-uteis.md) - Comandos úteis
+- [`faq.md`](./faq.md) - Perguntas frequentes
 
 ## 🚀 Como Começar
 
-### Opção 1: Setup Rápido (Experiência com Next.js)
-1. Clone/crie o repositório
-2. Siga o [`guia-setup.md`](./guia-setup.md) passo a passo
-3. Use o [`checklist.md`](./checklist.md) para garantir que não esqueceu nada
+### Pré-requisitos
+- Código da Fase 1 exportado
+- Claude Code instalado e configurado
+- Acesso ao repositório GitHub
 
-### Opção 2: Setup Detalhado (Primeira vez com Next.js)
-1. Leia o [`faq.md`](./faq.md) primeiro para entender conceitos
-2. Siga o [`guia-setup.md`](./guia-setup.md) com calma
-3. Consulte [`estrutura-pastas.md`](./estrutura-pastas.md) para entender a arquitetura
-4. Use [`comandos-uteis.md`](./comandos-uteis.md) como referência
+### Prompt para Claude Code
 
-## 📋 Checklist Rápida de Conclusão
+Use este prompt com Claude Code para fazer o setup completo:
+
+```
+Estou começando a FASE 2 do processo de desenvolvimento. Tenho o código frontend exportado da Fase 1 (Lovable/v0) e preciso preparar o ambiente para desenvolvimento backend.
+
+Por favor:
+
+1. Validar o código exportado:
+   - Verificar package.json
+   - Verificar estrutura de pastas
+   - Identificar dependências faltantes
+
+2. Configurar ambiente:
+   - Criar/atualizar .gitignore
+   - Criar .env.example
+   - Configurar ESLint e Prettier (se necessário)
+   - Adicionar scripts úteis ao package.json
+
+3. Preparar estrutura para backend:
+   - Criar pasta docs/ para documentação técnica
+   - Criar pasta .ai/ para contextos de IA
+   - Criar pasta planejamento/ se não existir
+   - Manter estrutura do Next.js intacta
+
+4. Validar que tudo funciona:
+   - Instalar dependências
+   - Testar build
+   - Verificar se app roda sem erros
+
+5. Git:
+   - Fazer commit inicial se ainda não foi feito
+   - Criar branch develop
+   - Documentar setup no README
+
+Me informe sobre qualquer problema encontrado e o que foi ajustado.
+```
+
+## 📋 Checklist Rápida
+
+### Claude Code Faz
+- [ ] Validação do código exportado
+- [ ] Instalação de dependências
+- [ ] Configuração de .gitignore e .env.example
+- [ ] Criação de estrutura de pastas
+- [ ] Testes de build e execução
+- [ ] Commit e push inicial
+
+### Você Faz (Manualmente)
+- [ ] Fornecer acesso ao código da Fase 1
+- [ ] Revisar mudanças propostas por Claude
+- [ ] Aprovar commits
+- [ ] Validar que aplicação roda no browser
+
+## ✅ Quando Pronto
 
 Você completou esta fase quando:
 
 ### Técnico ✅
+- [ ] Código exportado está no repositório
+- [ ] `npm install` funciona sem erros (Claude Code testou)
 - [ ] `npm run dev` funciona sem erros
 - [ ] `npm run build` completa com sucesso
 - [ ] App carrega no browser (http://localhost:3000)
-- [ ] Design corresponde ao aprovado na Fase 1
-- [ ] Estrutura de pastas criada (ver [`estrutura-pastas.md`](./estrutura-pastas.md))
 
 ### Configuração ✅
-- [ ] `.env.example` criado
-- [ ] `.env.local` criado (pode estar vazio)
-- [ ] `.gitignore` configurado corretamente
-- [ ] ESLint rodando (`npm run lint`)
+- [ ] `.env.example` existe
+- [ ] `.gitignore` configurado
+- [ ] Estrutura de pastas criada:
+  - [ ] `docs/`
+  - [ ] `.ai/`
+  - [ ] Estrutura Next.js preservada
 
 ### Git ✅
-- [ ] Repositório criado/clonado
-- [ ] Branch `develop` criado
-- [ ] Primeiro commit realizado
-- [ ] Push para repositório remoto feito
+- [ ] Repositório no GitHub
+- [ ] Branch `main` ou `master` existe
+- [ ] Branch `develop` criada
+- [ ] Commits com mensagens claras
+- [ ] Push para remoto feito
 
 ### Documentação ✅
-- [ ] `README.md` do projeto atualizado
-- [ ] Setup está documentado
-- [ ] Time consegue rodar o projeto
-
-**Checklist completo**: Ver [`checklist.md`](./checklist.md) (200+ itens detalhados)
+- [ ] `README.md` atualizado com instruções de setup
+- [ ] Estrutura de projeto documentada
 
 ## 💡 Dicas Importantes
 
 ### ✅ Fazer
-- ✅ Seguir o [`guia-setup.md`](./guia-setup.md) passo a passo
-- ✅ Usar o [`checklist.md`](./checklist.md) para não esquecer nada
-- ✅ Testar `npm run build` (não só `npm run dev`)
-- ✅ Documentar no `README.md` do projeto
-- ✅ Consultar [`faq.md`](./faq.md) quando tiver dúvidas
+- ✅ Deixar Claude Code fazer o setup
+- ✅ Revisar mudanças antes de aprovar commits
+- ✅ Testar aplicação no browser após setup
+- ✅ Documentar qualquer ajuste manual necessário
 
 ### ❌ Evitar
+- ❌ Tentar instalar dependências manualmente (use Claude Code)
 - ❌ Commitar `node_modules/` ou `.env.local`
-- ❌ Pular a validação do build
-- ❌ Configurar Supabase agora (vem na Fase 7)
-- ❌ Adicionar features novas (foco no setup)
-- ❌ Ignorar warnings do ESLint
+- ❌ Pular validação do build
+- ❌ Ignorar warnings importantes
 
-## 🆘 Problemas Comuns?
+## 🆘 Problemas Comuns
 
-Consulte o [`faq.md`](./faq.md) para soluções de:
-- `npm install` falhando
-- `npm run dev` não funcionando
-- Porta 3000 ocupada
-- Tailwind não aplicando estilos
-- Erros de TypeScript
-- E muito mais...
+### Claude Code não consegue instalar dependências
+**Solução**: Verificar versão do Node.js (requer 18+). Verificar conexão com internet. Limpar cache npm se necessário.
 
-## 📚 Recursos de Referência
+### Código exportado tem erros TypeScript
+**Solução**: Pedir para Claude Code corrigir. Geralmente são imports faltantes ou tipos não definidos.
 
-### Durante o Setup
-- [`guia-setup.md`](./guia-setup.md) - Passo a passo
-- [`checklist.md`](./checklist.md) - O que fazer
-- [`faq.md`](./faq.md) - Como resolver problemas
+### Port 3000 está ocupada
+**Solução**: Usar porta alternativa: `npm run dev -- -p 3001`
 
-### Depois do Setup (Referência Diária)
-- [`estrutura-pastas.md`](./estrutura-pastas.md) - Onde colocar arquivos
-- [`template-env.md`](./template-env.md) - Como configurar variáveis
-- [`comandos-uteis.md`](./comandos-uteis.md) - Comandos do dia a dia
+### Build falha
+**Solução**: Claude Code deve investigar e corrigir. Geralmente são dependências faltantes ou configuração incorreta.
+
+## 📚 Estrutura de Pastas Esperada
+
+Após FASE 2, seu projeto deve ter:
+
+```
+projeto/
+├── .ai/                    # Contextos de IA (criar agora)
+├── .claude/                # Skills Claude (criar agora)
+├── docs/                   # Documentação (criar agora)
+├── planejamento/           # Copiar deste repo (opcional)
+├── src/                    # Código Next.js (já existe)
+│   ├── app/
+│   ├── components/
+│   └── lib/
+├── public/                 # Assets estáticos
+├── .env.example            # Template env vars
+├── .gitignore              # Git ignore
+├── next.config.js          # Config Next.js
+├── package.json            # Dependências
+├── README.md               # Documentação
+└── tsconfig.json           # Config TypeScript
+```
 
 ## 🔗 Próxima Etapa
 
-Quando o setup estiver completo e validado, vá para: **FASE 3: DOCUMENTAÇÃO**
+Quando setup completo, vá para: **FASE 3: DOCUMENTAÇÃO**
 
-Na Fase 3 você vai:
-1. Analisar o código frontend exportado
-2. Documentar arquitetura completa
-3. Criar especificação técnica detalhada
-4. Preparar banco de dados schema
-5. Planejar APIs necessárias
+Na Fase 3 você vai usar Claude Code para:
+1. Analisar código frontend exportado
+2. Criar documentação técnica completa
+3. Definir schema de banco de dados
+4. Planejar APIs necessárias
+5. Preparar especificação técnica
 
 ---
 

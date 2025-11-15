@@ -68,22 +68,22 @@ Quando completo, prossiga para [Fase 1: Design Frontend](#-fase-1-design-fronten
 
 ## 🎨 FASE 1: DESIGN FRONTEND
 
-**Objetivo**: Criar todas as telas e componentes visuais da aplicação.
-**Duração**: 2-4 dias
-**Ferramenta**: Figma Make
+**Objetivo**: Criar todas as telas e componentes visuais usando IA (Lovable, v0).
+**Duração**: 2-3 dias
+**Ferramentas**: Lovable.dev, v0.dev, ou similar
 
 ### 📂 Arquivos Principais
 - [`planejamento/01-DESIGN-FRONTEND/`](./planejamento/01-DESIGN-FRONTEND/) - Documentos da fase
-- [`planejamento/01-DESIGN-FRONTEND/guia-figmamaker.md`](./planejamento/01-DESIGN-FRONTEND/guia-figmamaker.md) - Guia completo do Figma Make
-- [`planejamento/01-DESIGN-FRONTEND/prompt-figmamaker.md`](./planejamento/01-DESIGN-FRONTEND/prompt-figmamaker.md) - Prompt para Figma Make
-- [`planejamento/01-DESIGN-FRONTEND/checklist.md`](./planejamento/01-DESIGN-FRONTEND/checklist.md) - Checklist da fase
+- [`planejamento/01-DESIGN-FRONTEND/README.md`](./planejamento/01-DESIGN-FRONTEND/README.md) - Guia da fase
+- [`planejamento/01-DESIGN-FRONTEND/checklist.md`](./planejamento/01-DESIGN-FRONTEND/checklist.md) - Checklist simplificada
+- [`planejamento/01-DESIGN-FRONTEND/prompt-brief-design-completo.md`](./planejamento/01-DESIGN-FRONTEND/prompt-brief-design-completo.md) - Template de prompt
 
 ### ✅ Checklist da Fase
-- [ ] Brief de design criado
-- [ ] Todas as telas principais criadas
-- [ ] Navegação funciona
-- [ ] Design responsivo
+- [ ] Brief para IA criado
+- [ ] Telas geradas com ferramenta de IA
+- [ ] Design responsivo (mobile + desktop)
 - [ ] Cliente aprovou design
+- [ ] Código exportado e documentado
 
 ### 🔗 Próxima Fase
 Quando completo, prossiga para [Fase 2: Transição para Backend](#-fase-2-transição-para-backend)
@@ -92,9 +92,9 @@ Quando completo, prossiga para [Fase 2: Transição para Backend](#-fase-2-trans
 
 ## 🔄 FASE 2: TRANSIÇÃO PARA BACKEND
 
-**Objetivo**: Configurar o ambiente local e preparar o repositório para desenvolvimento.
+**Objetivo**: Configurar ambiente de desenvolvimento usando Claude Code.
 **Duração**: 1 dia
-**Ferramentas**: Claude Code, Cursor, Git
+**Ferramentas**: Claude Code (automatiza setup)
 
 ### 📂 Arquivos Principais
 - [`planejamento/02-TRANSICAO-BACKEND/`](./planejamento/02-TRANSICAO-BACKEND/) - Documentos da fase
@@ -103,10 +103,11 @@ Quando completo, prossiga para [Fase 2: Transição para Backend](#-fase-2-trans
 - [`planejamento/02-TRANSICAO-BACKEND/checklist.md`](./planejamento/02-TRANSICAO-BACKEND/checklist.md) - Checklist da fase
 
 ### ✅ Checklist da Fase
-- [ ] Repositório clonado
-- [ ] Dependências instaladas
+- [ ] Claude Code validou código exportado
+- [ ] Dependências instaladas (via Claude Code)
 - [ ] Projeto roda localmente
 - [ ] Estrutura de pastas criada
+- [ ] Primeiro commit realizado
 
 ### 🔗 Próxima Fase
 Quando completo, prossiga para [Fase 3: Documentação](#-fase-3-documentação)
@@ -246,7 +247,7 @@ Quando completo, prossiga para [Fase 9: Desenvolvimento](#-fase-9-desenvolviment
 
 **Objetivo**: Implementar todas as features seguindo a especificação.
 **Duração**: 2-3 semanas
-**Ferramentas**: Claude Code, Cursor, Supabase, N8N (se necessário)
+**Ferramentas**: Claude Code, Cursor, Supabase
 
 ### 📂 Arquivos Principais
 - [`planejamento/09-DESENVOLVIMENTO/`](./planejamento/09-DESENVOLVIMENTO/) - Documentos da fase
@@ -284,6 +285,19 @@ Quando completo, prossiga para [Fase 10: Deploy](#-fase-10-deploy)
 
 ### 🔗 Projeto Completo!
 Parabéns! 🎉
+
+---
+
+## 🚀 Guias Avançados (Opcional)
+
+Para funcionalidades avançadas não incluídas no MVP básico, consulte:
+
+### [`planejamento/GUIAS-AVANCADOS/`](./planejamento/GUIAS-AVANCADOS/)
+
+**Guias disponíveis**:
+- **[N8N - Automações e IA](./planejamento/GUIAS-AVANCADOS/N8N/README.md)**: Workflows complexos, processamento assíncrono, integrações com múltiplas APIs
+
+**Quando usar**: Apenas quando o projeto específico requer funcionalidades avançadas não cobertas pelo fluxo MVP.
 
 ---
 
@@ -401,9 +415,9 @@ ai-coding-process/
    - Aprove o escopo
 
 3. **Prossiga para Fase 1**
-   - Design no Figma Make
+   - Use ferramenta de IA (Lovable/v0) para gerar design
    - Cliente aprova design
-   - Export o código Next.js + Tailwind v4
+   - Export o código Next.js + Tailwind
 
 4. **Continue até Fase 10**
    - Siga o plano semanal

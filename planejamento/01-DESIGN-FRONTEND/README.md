@@ -1,111 +1,148 @@
-# 🎨 FASE 1: DESIGN FRONTEND COM FIGMAMAKER + TAILWIND V4 + SHADCN
+# 🎨 FASE 1: DESIGN FRONTEND COM IA
 
 ## Visão Geral
-Criar todas as telas, componentes visuais e sistema de design da aplicação usando **FigmaMake.com** - plataforma de frontend com IA que integra Figma + código Tailwind v4 + Shadcn UI em tempo real.
+Criar todas as telas, componentes visuais e sistema de design da aplicação usando ferramentas de **IA de design** (Lovable.dev, v0.dev, ou similar) que geram código Next.js + Tailwind + Shadcn UI automaticamente.
 
-**Duração estimada**: 3-5 dias
-**Responsável**: Designer/PM + Cliente
-**Stack**: FigmaMake.com → Tailwind CSS v4 + Shadcn/ui + Next.js 14
+**Duração estimada**: 2-3 dias
+**Responsável**: PM + Cliente
+**Ferramentas**: Lovable, v0, ou ferramenta similar de IA
+**Output**: Next.js 14 + Tailwind CSS + Shadcn/ui
 
 ## 🎯 Objetivos
-1. Converter PRD em wireframes/designs visuais no FigmaMake
-2. Criar todas as telas principais com componentes reutilizáveis
-3. Definir Design System completo (cores, tipografia, espaçamento)
-4. Gerar código Tailwind v4 + Shadcn limpo e padronizado
-5. Obter aprovação visual do cliente
-6. Exportar código funcional para GitHub
-7. Documentar arquitetura de componentes
+1. Converter PRD em prompts claros para ferramenta de IA
+2. Gerar todas as telas principais através de IA
+3. Revisar e ajustar componentes e layout
+4. Obter aprovação visual do cliente
+5. Exportar código funcional
+6. Documentar telas e componentes criados
 
 ## 📂 Arquivos Nesta Fase
-- [`checklist.md`](./checklist.md) - Checklist detalhada (atualizada)
-- [`guia-figmamaker.md`](./guia-figmamaker.md) - Guia completo de FigmaMake
-- [`prompt-figmamaker.md`](./prompt-figmamaker.md) - Prompts de IA para FigmaMake
-- [`prompt-brief-design-completo.md`](./prompt-brief-design-completo.md) - 🆕 PROMPT 1.1: Brief completo para IA
-- [`prompt-documento-transicao.md`](./prompt-documento-transicao.md) - 🆕 PROMPT 1.2: Gerar doc de transição
-- [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) - Padrões Tailwind v4
-- [`componentes-shadcn.md`](./componentes-shadcn.md) - Biblioteca Shadcn/ui
-- [`design-system.md`](./design-system.md) - Sistema de design completo
+- [`checklist.md`](./checklist.md) - Checklist simplificada da fase
+- [`prompt-brief-design-completo.md`](./prompt-brief-design-completo.md) - Template de prompt para IA
+- [`prompt-design-pt-br.md`](./prompt-design-pt-br.md) - Prompt em português
+- [`prompt-documento-transicao.md`](./prompt-documento-transicao.md) - Documentar o export
+- [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) - Padrões Tailwind
+- [`componentes-shadcn.md`](./componentes-shadcn.md) - Componentes Shadcn/ui
+- [`design-system.md`](./design-system.md) - Sistema de design padrão
 
 ## 🔄 Fluxo da Fase
 ```
-PRD → Brief Design → FigmaMake Wireframes → Design Visual + Code
-→ Aprovação Cliente → Design System → Export código → GitHub
+PRD → Brief para IA → Gerar com Lovable/v0 → Revisar →
+Cliente aprova → Export código → Documentar
 ```
 
 ## ✅ Checklist Rápida
-- [ ] Brief de design criado (variáveis Tailwind v4)
-- [ ] Telas mapeadas e criadas no FigmaMake
-- [ ] Design System definido (cores, tipos, spacing)
+- [ ] Brief de design criado baseado no PRD
+- [ ] Telas principais geradas na ferramenta de IA
+- [ ] Design System básico definido (cores, tipografia)
 - [ ] Componentes Shadcn integrados
-- [ ] Design responsivo (mobile + tablet + desktop)
-- [ ] Todos os estados visuais (normal, loading, error, empty)
-- [ ] Cliente aprovou design
-- [ ] Código Tailwind v4 exportado para GitHub
+- [ ] Design responsivo (mobile + desktop)
+- [ ] Estados principais (normal, loading, error)
+- [ ] Cliente aprovou visualmente
+- [ ] Código exportado e documentado
 
-## 📋 Telas Principais (Exemplo)
-Para TaskFlow (exemplo do PRD):
-1. **Login/Signup** - Autenticação (form + validação)
-2. **Dashboard** - Visão geral de projetos (grid responsivo)
-3. **Detalhes do Projeto** - Kanban com tarefas (drag-drop)
-4. **Criar/Editar Projeto** - Modal ou página (forms complexos)
-5. **Admin Panel** - Gerenciar usuários (data table)
-6. **Perfil de Usuário** - Settings (profile + preferences)
+## 🛠️ Ferramentas Recomendadas
 
-## 🛠️ Tech Stack
-- **Design + Frontend**: FigmaMake.com (Figma + IA + Tailwind v4 + Shadcn em tempo real)
-- **Styling**: Tailwind CSS v4 (com variáveis CSS personalizadas)
-- **Componentes**: Shadcn/ui (componentes compostos, acessíveis)
-- **Framework**: Next.js 14 + React 18 + TypeScript
-- **Ícones**: Lucide React
-- **Animações**: Tailwind CSS + Shadcn animations
+### Opção 1: Lovable.dev (Recomendado)
+- IA que gera aplicações completas
+- Suporte a Next.js + Tailwind + Shadcn
+- Export direto para código
+- Interface intuitiva
+
+### Opção 2: v0.dev (Vercel)
+- Focado em componentes React
+- Excelente para UI/UX
+- Integração com Shadcn
+- Gratuito para uso básico
+
+### Opção 3: Outras ferramentas
+- Builder.io
+- Framer
+- Qualquer ferramenta que exporte Next.js + Tailwind
 
 ## 🚀 Como Começar
 
-### Passo 1: Prepare o Brief
-1. Leia [`guia-figmamaker.md`](./guia-figmamaker.md)
-2. Estude [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md)
-3. Revise [`componentes-shadcn.md`](./componentes-shadcn.md)
+### Passo 1: Preparar Brief
+1. Revisar o PRD completo
+2. Identificar todas as telas necessárias
+3. Definir preferências de design (cores, estilo)
+4. Usar template em [`prompt-brief-design-completo.md`](./prompt-brief-design-completo.md)
 
-### Passo 2: Crie no FigmaMake
-1. Acesse [figmamaker.com](https://figmamaker.com)
-2. Use o prompt: [`prompt-figmamaker.md`](./prompt-figmamaker.md)
-3. Crie wireframes (aprovação cliente)
-4. Desenvolva design visual com variáveis Tailwind v4
-5. Integre componentes Shadcn/ui
+### Passo 2: Gerar com IA
+1. Escolher ferramenta (Lovable ou v0)
+2. Inserir prompt do brief
+3. Gerar telas uma por uma ou conjunto completo
+4. Revisar e fazer ajustes iterativos
 
-### Passo 3: Obtenha Aprovação
-1. Exporte designs do FigmaMake para cliente
-2. Compartilhe link do projeto
-3. Recolha feedback (máx 2-3 rodadas)
-4. Incorpore ajustes
+### Passo 3: Aprovação Cliente
+1. Compartilhar link de preview
+2. Coletar feedback (máx 2-3 rodadas)
+3. Fazer ajustes solicitados
+4. Obter aprovação por escrito
 
-### Passo 4: Export e GitHub
-1. Exporte código Tailwind v4 do FigmaMake
-2. Configure Design System (`tailwind.config.ts` + `globals.css`)
-3. Crie componentes reutilizáveis em `src/components`
-4. Documente tudo em `.ai/design-export.md`
-5. Commit e push para GitHub
+### Passo 4: Export e Documentação
+1. Exportar código da ferramenta
+2. Validar que código funciona localmente
+3. Documentar em `.ai/frontend-export.md`
+4. Listar componentes e telas criadas
+
+## 📋 Telas Principais (Exemplo)
+Para qualquer projeto típico:
+1. **Login/Signup** - Autenticação
+2. **Dashboard** - Visão geral principal
+3. **Listagem** - Lista de itens principais
+4. **Detalhes** - Visualizar item específico
+5. **Criar/Editar** - Formulários CRUD
+6. **Perfil/Settings** - Configurações do usuário
 
 ## ✅ Quando Pronto
-- [ ] Todas as telas do PRD desenhadas e funcionais
-- [ ] Design System completo documentado
-- [ ] Componentes Shadcn/ui integrados e reutilizáveis
-- [ ] Variáveis Tailwind v4 padronizadas
-- [ ] Design responsivo funciona em 3+ breakpoints
+- [ ] Todas as telas do PRD criadas
+- [ ] Componentes Shadcn/ui integrados
+- [ ] Design responsivo funciona
 - [ ] Cliente aprovou visualmente
-- [ ] Código no GitHub é clean e documentado
-- [ ] Arquivo `.ai/design-export.md` completo
+- [ ] Código exportado e funcionando
+- [ ] Arquivo `.ai/frontend-export.md` completo
+- [ ] Lista de componentes documentada
+
+## 💡 Dicas Importantes
+
+### ✅ Fazer
+- ✅ Usar prompts claros e específicos
+- ✅ Gerar telas incrementalmente (não tudo de uma vez)
+- ✅ Testar código exportado localmente
+- ✅ Documentar componentes criados
+- ✅ Obter aprovação cliente antes de prosseguir
+
+### ❌ Evitar
+- ❌ Criar designs muito complexos no MVP
+- ❌ Múltiplas rodadas infinitas de feedback
+- ❌ Pular documentação do export
+- ❌ Não testar código exportado
+- ❌ Adicionar features não previstas no PRD
+
+## 🆘 Problemas Comuns
+
+### Problema: IA gerou código que não funciona
+**Solução**: Pedir para regenerar com instruções mais claras. Se persistir, fazer ajustes manuais mínimos e documentar.
+
+### Problema: Cliente quer muitas mudanças
+**Solução**: Limitar a 2-3 rodadas de feedback. Priorizar mudanças críticas para MVP.
+
+### Problema: Componentes não parecem com Shadcn
+**Solução**: Ser explícito no prompt: "Use componentes Shadcn/ui exatamente como na documentação"
+
+### Problema: Design não é responsivo
+**Solução**: Incluir no prompt: "Design deve ser totalmente responsivo (mobile-first)"
 
 ## 📚 Padrões que Seguimos
-- ✅ Tailwind CSS v4 com variáveis CSS customizadas
-- ✅ Shadcn/ui para componentes (botões, inputs, modals, etc)
-- ✅ Mobile-first responsive design
+- ✅ Tailwind CSS para estilos
+- ✅ Shadcn/ui para componentes base
+- ✅ Mobile-first responsive
 - ✅ Componentização reutilizável
-- ✅ Acessibilidade (WCAG AA)
-- ✅ Dark mode ready
+- ✅ Acessibilidade básica (WCAG AA)
 - ✅ TypeScript para type safety
 
 ---
 
 **Status**: 🟢 Pronto para começar
-**Próxima fase**: FASE 2: Transição para Backend (Setup ambiente)
+**Próxima fase**: FASE 2: Transição para Backend (Setup com Claude Code)

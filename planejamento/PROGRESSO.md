@@ -42,29 +42,29 @@
 
 ## 🎨 FASE 1: DESIGN FRONTEND
 
-> **Objetivo**: Criar todas as telas no Figma Make ou v0/Lovable
+> **Objetivo**: Criar todas as telas usando ferramenta de IA (Lovable, v0)
 
 ### Preparação
-- [ ] Brief de design criado (usar PROMPT 1.1 em `01-DESIGN-FRONTEND/`)
-- [ ] Referências visuais coletadas
-- [ ] Paleta de cores definida (se houver preferência)
-- [ ] Plataforma escolhida (Figma Make, v0, ou Lovable)
+- [ ] Brief de design criado baseado no PRD
+- [ ] Referências visuais coletadas (sites similares)
+- [ ] Preferências de estilo definidas
+- [ ] Ferramenta de IA escolhida (Lovable, v0, ou similar)
 
-### Execução do Design
-- [ ] Todas as telas principais criadas
+### Geração com IA
+- [ ] Todas as telas MVP criadas na ferramenta
 - [ ] Navegação entre telas funciona
 - [ ] Design responsivo (mobile + desktop)
-- [ ] Componentes reutilizáveis criados
-- [ ] Estados (loading/error/empty) implementados
+- [ ] Componentes Shadcn/ui integrados
+- [ ] Estados principais (normal, loading, error, empty)
 - [ ] Cliente aprovou design
 
-### Documentação
-- [ ] Documento de transição gerado (PROMPT 1.2)
-- [ ] `.ai/frontend-export.md` criado com código exportado
-- [ ] Componentes documentados com props
-- [ ] Dados mockados listados
-- [ ] APIs necessárias identificadas
-- [ ] Código exportado para GitHub
+### Export e Documentação
+- [ ] Código exportado da ferramenta
+- [ ] `.ai/frontend-export.md` criado
+- [ ] Componentes documentados
+- [ ] Telas listadas
+- [ ] Design system documentado (cores, fontes)
+- [ ] Código validado localmente (estrutura faz sentido)
 
 **Status Fase 1**: ⏳ Pendente
 
@@ -72,24 +72,29 @@
 
 ## 🔄 FASE 2: TRANSIÇÃO PARA BACKEND
 
-> **Objetivo**: Setup do ambiente local e estrutura de pastas
+> **Objetivo**: Setup do ambiente usando Claude Code
 
-### Setup Inicial (⚠️ Manual - fazer localmente)
-- [ ] Repositório clonado localmente
-- [ ] Dependências instaladas (`npm install`)
+### Setup via Claude Code
+- [ ] Claude Code validou código exportado da Fase 1
+- [ ] Dependências instaladas (via Claude Code)
 - [ ] Projeto roda localmente (`npm run dev`)
-- [ ] `.env.example` criado
-- [ ] Estrutura de pastas padrão criada
+- [ ] `npm run build` funciona sem erros
+- [ ] `.env.example` criado/atualizado
+- [ ] `.gitignore` configurado corretamente
 
-### Estrutura de Pastas
+### Estrutura de Pastas (criada via Claude Code)
 - [ ] `docs/` criado
 - [ ] `.ai/` criado
-- [ ] `.ai/prompts/` criado
+- [ ] `.ai/prompts/` criado (se necessário)
 - [ ] `.claude/` criado (se não existir)
 - [ ] `.claude/skills/` criado
-- [ ] `planejamento/` criado (se não existir)
-- [ ] `supabase/` criado
-- [ ] `supabase/migrations/` criado
+- [ ] Estrutura Next.js preservada
+
+### Git e Documentação
+- [ ] Commit inicial (se necessário)
+- [ ] Branch `develop` criada
+- [ ] README.md atualizado com instruções
+- [ ] Push para repositório remoto
 
 **Status Fase 2**: ⏳ Pendente
 
