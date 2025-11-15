@@ -1,6 +1,33 @@
 # 🚀 Processo Completo de Desenvolvimento com IA Code
 
-Um guia estruturado e prático para desenvolver aplicações web completas utilizando **Claude IA** e **Lovable/v0** como ferramentas principales.
+Um guia estruturado e prático para desenvolver aplicações web completas utilizando **Claude IA**, **Figma Make** e **Cursor** como ferramentas principais.
+
+## 🛠️ Stack e Ferramentas
+
+**Frontend**:
+- Design: **Figma Make** (2-4 dias)
+- Stack: Next.js 14+ com App Router, Tailwind CSS v4, shadcn/ui, TypeScript
+
+**Backend**:
+- Desenvolvimento: **Claude Code** + **Cursor**
+- Database: **Supabase** (obrigatório) - PostgreSQL + Auth + Storage + Real-time
+- Agentes de IA: **N8N** (para projetos com automação e agentes)
+
+**Deploy**:
+- Prioridade: **Vercel** (frontend/fullstack)
+- Database: **Supabase Cloud**
+
+## ⏱️ Timeline Média do Processo
+
+- **Entrevista/PRD**: 1-2 semanas
+- **Design Frontend (Figma Make)**: 2-4 dias
+- **Setup Backend**: 1 dia
+- **Documentação**: 1 dia
+- **Desenvolvimento Backend**: 2-3 semanas
+- **Testes**: 3 dias
+- **Deploy**: 2 dias
+
+**Total estimado**: 4-6 semanas para um MVP completo
 
 ## 📚 Visão Geral
 
@@ -25,6 +52,8 @@ Este repositório contém todos os documentos, prompts, checklists e guias para 
 ## 📋 FASE 0: PRÉ-DESENVOLVIMENTO
 
 **Objetivo**: Definir claramente o que será construído antes de começar qualquer código.
+**Duração**: 1-2 semanas
+**Ferramentas**: Claude IA, entrevistas com cliente
 
 ### 📂 Arquivos Principais
 - [`planejamento/00-PRE-DESENVOLVIMENTO/`](./planejamento/00-PRE-DESENVOLVIMENTO/) - Documentos da fase
@@ -49,11 +78,13 @@ Quando completo, prossiga para [Fase 1: Design Frontend](#-fase-1-design-fronten
 ## 🎨 FASE 1: DESIGN FRONTEND
 
 **Objetivo**: Criar todas as telas e componentes visuais da aplicação.
+**Duração**: 2-4 dias
+**Ferramenta**: Figma Make
 
 ### 📂 Arquivos Principais
 - [`planejamento/01-DESIGN-FRONTEND/`](./planejamento/01-DESIGN-FRONTEND/) - Documentos da fase
-- [`planejamento/01-DESIGN-FRONTEND/guia-design.md`](./planejamento/01-DESIGN-FRONTEND/guia-design.md) - Guia completo de design
-- [`planejamento/01-DESIGN-FRONTEND/prompt-design.md`](./planejamento/01-DESIGN-FRONTEND/prompt-design.md) - Prompt para Lovable/v0
+- [`planejamento/01-DESIGN-FRONTEND/guia-figmamaker.md`](./planejamento/01-DESIGN-FRONTEND/guia-figmamaker.md) - Guia completo do Figma Make
+- [`planejamento/01-DESIGN-FRONTEND/prompt-figmamaker.md`](./planejamento/01-DESIGN-FRONTEND/prompt-figmamaker.md) - Prompt para Figma Make
 - [`planejamento/01-DESIGN-FRONTEND/checklist.md`](./planejamento/01-DESIGN-FRONTEND/checklist.md) - Checklist da fase
 
 ### ✅ Checklist da Fase
@@ -71,6 +102,8 @@ Quando completo, prossiga para [Fase 2: Transição para Backend](#-fase-2-trans
 ## 🔄 FASE 2: TRANSIÇÃO PARA BACKEND
 
 **Objetivo**: Configurar o ambiente local e preparar o repositório para desenvolvimento.
+**Duração**: 1 dia
+**Ferramentas**: Claude Code, Cursor, Git
 
 ### 📂 Arquivos Principais
 - [`planejamento/02-TRANSICAO-BACKEND/`](./planejamento/02-TRANSICAO-BACKEND/) - Documentos da fase
@@ -92,6 +125,8 @@ Quando completo, prossiga para [Fase 3: Documentação](#-fase-3-documentação)
 ## 📝 FASE 3: DOCUMENTAÇÃO
 
 **Objetivo**: Documentar completamente a arquitetura, banco de dados e especificação técnica.
+**Duração**: 1 dia
+**Ferramentas**: Claude IA para análise e documentação
 
 ### 📂 Arquivos Principais
 - [`docs/`](./docs/) - Documentação completa
@@ -219,6 +254,8 @@ Quando completo, prossiga para [Fase 9: Desenvolvimento](#-fase-9-desenvolviment
 ## 💻 FASE 9: DESENVOLVIMENTO
 
 **Objetivo**: Implementar todas as features seguindo a especificação.
+**Duração**: 2-3 semanas
+**Ferramentas**: Claude Code, Cursor, Supabase, N8N (se necessário)
 
 ### 📂 Arquivos Principais
 - [`planejamento/09-DESENVOLVIMENTO/`](./planejamento/09-DESENVOLVIMENTO/) - Documentos da fase
@@ -240,6 +277,8 @@ Quando completo, prossiga para [Fase 10: Deploy](#-fase-10-deploy)
 ## 🚀 FASE 10: DEPLOY
 
 **Objetivo**: Colocar a aplicação em produção.
+**Duração**: 2 dias
+**Plataforma**: Vercel (prioritário) + Supabase Cloud
 
 ### 📂 Arquivos Principais
 - [`planejamento/10-DEPLOY/`](./planejamento/10-DEPLOY/) - Documentos da fase
@@ -332,9 +371,9 @@ ai-coding-process/
    - Aprove o escopo
 
 3. **Prossiga para Fase 1**
-   - Design no Lovable/v0
+   - Design no Figma Make
    - Cliente aprova design
-   - Export o código
+   - Export o código Next.js + Tailwind v4
 
 4. **Continue até Fase 10**
    - Siga o plano semanal
