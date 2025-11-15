@@ -20,6 +20,8 @@ Criar todas as telas, componentes visuais e sistema de design da aplicação usa
 - [`checklist.md`](./checklist.md) - Checklist detalhada (atualizada)
 - [`guia-figmamaker.md`](./guia-figmamaker.md) - Guia completo de FigmaMake
 - [`prompt-figmamaker.md`](./prompt-figmamaker.md) - Prompts de IA para FigmaMake
+- [`prompt-brief-design-completo.md`](./prompt-brief-design-completo.md) - 🆕 PROMPT 1.1: Brief completo para IA
+- [`prompt-documento-transicao.md`](./prompt-documento-transicao.md) - 🆕 PROMPT 1.2: Gerar doc de transição
 - [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) - Padrões Tailwind v4
 - [`componentes-shadcn.md`](./componentes-shadcn.md) - Biblioteca Shadcn/ui
 - [`design-system.md`](./design-system.md) - Sistema de design completo

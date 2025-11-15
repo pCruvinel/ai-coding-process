@@ -1,1 +1,67 @@
-# ✅ FASE 4: VALIDAÇÃO\n\n## Visão Geral\nValidar consistência, completude e viabilidade de todo o plano antes de começar desenvolvimento.\n\n**Duração**: 1 dia\n**Responsável**: Tech Lead + PM\n\n## 🎯 Objetivos\n1. Validar consistência (PRD ↔️ Docs)\n2. Verificar completude de documentação\n3. Avaliar viabilidade técnica\n4. Gerar relatório de validação\n5. Identificar gaps e riscos\n\n## ✅ Checklist Rápida\n- [ ] PRD vs Arquitetura consistentes\n- [ ] Todos os endpoints documentados\n- [ ] Banco de dados schema completo\n- [ ] Features MVP vs Pós-MVP bem separadas\n- [ ] Relatório de validação gerado\n- [ ] Score >= 8/10\n\n## 🔍 Validações Críticas\n\n### Funcionais\n- [ ] Cada feature do PRD tem especificação técnica\n- [ ] Cada endpoint necessário está documentado\n- [ ] Cada tabela do banco tem definição\n- [ ] Sem features perdidas ou esquecidas\n\n### Técnicas\n- [ ] Stack escolhida suporta features\n- [ ] Integrações são viáveis\n- [ ] Performance viável para usuários esperados\n- [ ] Sem dependências circulares\n\n### Prazo\n- [ ] Timeline realista vs features\n- [ ] Espaço para testes e refinamento\n- [ ] Buffer para imprevistos\n\n### Risco\n- [ ] Riscos identificados\n- [ ] Plano de mitigação existe\n- [ ] Sem riscos bloqueadores\n\n## 📊 Relatório de Validação\nGerar arquivo: `planejamento/VALIDACAO.md` com:\n- Score geral (0-10)\n- Checklist completa\n- Gaps encontrados\n- Riscos identificados\n- Recomendações\n\n## 🚀 Como Começar\nVer [`prompt-validacao.md`](./prompt-validacao.md) para usar Claude\n\n## ✅ Quando Pronto\n- [ ] Relatório gerado\n- [ ] Score >= 8/10\n- [ ] Aprovação para próxima fase\n\n---\n\n**Status**: 🟢 Pronto para começar\n**Próxima**: FASE 5 (Plano Semanal)\n"
+# ✅ FASE 4: VALIDAÇÃO
+
+## Visão Geral
+Validar consistência, completude e viabilidade de todo o plano antes de começar desenvolvimento.
+
+**Duração**: 1 dia
+**Responsável**: Tech Lead + PM
+
+## 🎯 Objetivos
+1. Validar consistência (PRD ↔️ Docs)
+2. Verificar completude de documentação
+3. Avaliar viabilidade técnica
+4. Gerar relatório de validação
+5. Identificar gaps e riscos
+
+## ✅ Checklist Rápida
+- [ ] PRD vs Arquitetura consistentes
+- [ ] Todos os endpoints documentados
+- [ ] Banco de dados schema completo
+- [ ] Features MVP vs Pós-MVP bem separadas
+- [ ] Relatório de validação gerado
+- [ ] Score >= 8/10
+
+## 🔍 Validações Críticas
+
+### Funcionais
+- [ ] Cada feature do PRD tem especificação técnica
+- [ ] Cada endpoint necessário está documentado
+- [ ] Cada tabela do banco tem definição
+- [ ] Sem features perdidas ou esquecidas
+
+### Técnicas
+- [ ] Stack escolhida suporta features
+- [ ] Integrações são viáveis
+- [ ] Performance viável para usuários esperados
+- [ ] Sem dependências circulares
+
+### Prazo
+- [ ] Timeline realista vs features
+- [ ] Espaço para testes e refinamento
+- [ ] Buffer para imprevistos
+
+### Risco
+- [ ] Riscos identificados
+- [ ] Plano de mitigação existe
+- [ ] Sem riscos bloqueadores
+
+## 📊 Relatório de Validação
+Gerar arquivo: `planejamento/VALIDACAO.md` com:
+- Score geral (0-10)
+- Checklist completa
+- Gaps encontrados
+- Riscos identificados
+- Recomendações
+
+## 🚀 Como Começar
+🆕 **PROMPT 2.2**: Ver [`prompt-validacao-completa.md`](./prompt-validacao-completa.md) - Prompt completo e detalhado para validação cruzada da documentação com Claude Code
+
+## ✅ Quando Pronto
+- [ ] Relatório gerado
+- [ ] Score >= 8/10
+- [ ] Aprovação para próxima fase
+
+---
+
+**Status**: 🟢 Pronto para começar
+**Próxima**: FASE 5 (Plano Semanal)
