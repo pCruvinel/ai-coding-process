@@ -11,9 +11,12 @@ Este diretório contém arquivos de contexto para ferramentas de IA (Claude, GPT
 ├── contexto-projeto-template.md       ← Template para novo projeto
 ├── decisoes-tecnicas.md               ← ADRs e decisões importantes
 ├── frontend-export.md                 ← Código exportado do Figma Make/v0
+├── prompt-modelo-ideal-frontend.md    ← ⭐ Modelo ideal de prompt para desenvolvimento
+├── exemplo-uso-prompt.md              ← Exemplo prático de uso do modelo
 └── prompts/                           ← Prompts reutilizáveis
     ├── analise-documentacao.md
     ├── criar-feature.md
+    ├── debugging.md
     └── refatoracao.md
 ```
 
@@ -32,6 +35,23 @@ Este diretório contém arquivos de contexto para ferramentas de IA (Claude, GPT
 
 ### Durante Desenvolvimento
 
+#### Para Implementar Nova Feature (RECOMENDADO)
+
+1. **Abra o modelo ideal**:
+   ```bash
+   cat .ai/prompt-modelo-ideal-frontend.md
+   ```
+
+2. **Copie o template da seção "Template de Prompt Completo"**
+
+3. **Customize** com informações da sua feature específica
+
+4. **Cole no Claude Code** e acompanhe o progresso pelo checklist
+
+5. **Veja o exemplo** em `exemplo-uso-prompt.md` se tiver dúvidas
+
+#### Para Perguntas Gerais
+
 Quando pedir ajuda a uma IA:
 
 ```
@@ -40,6 +60,26 @@ antes de prosseguir. Depois, [sua solicitação...]
 ```
 
 ## 📝 Arquivos Principais
+
+### `prompt-modelo-ideal-frontend.md` ⭐ NOVO
+- **Quando usar**: Sempre que for implementar uma nova feature frontend
+- **Conteúdo**: Template completo de prompt para IA de desenvolvimento
+- **Inclui**:
+  - Checklist completo de implementação (12 fases)
+  - Padrões de código obrigatórios
+  - Anti-patterns a evitar
+  - Exemplos de código
+  - Critérios de sucesso
+- **Como usar**: Copie, customize e cole no chat do Claude Code
+
+### `exemplo-uso-prompt.md` ⭐ NOVO
+- **Quando usar**: Para entender como aplicar o modelo ideal
+- **Conteúdo**: Exemplo completo de implementação de feature "Gerenciamento de Tarefas"
+- **Inclui**:
+  - Prompt customizado completo
+  - Código esperado
+  - Timeline estimada
+  - Dicas para sucesso
 
 ### `contexto-projeto.md`
 - **Quando criar**: Fase 3 (Documentação)
