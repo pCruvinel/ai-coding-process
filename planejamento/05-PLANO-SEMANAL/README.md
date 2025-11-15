@@ -1,1 +1,53 @@
-# 📅 FASE 5: PLANO SEMANAL\n\n## Visão Geral\nCriar um plano semanal detalhado com tarefas do dia a dia.\n\n**Duração**: 1 dia\n**Responsável**: Tech Lead + PM\n\n## 🎯 Objetivos\n1. Analisar grafo de dependências\n2. Distribuir features em semanas\n3. Definir tarefas diárias\n4. Criar milestones\n5. Rastrear progresso\n\n## 📂 Documentos a Criar\n- `planejamento/PLANO-SEMANAL.md` - Plano por semana\n- `planejamento/PROGRESSO.md` - Tracking diário\n\n## ✅ Checklist Rápida\n- [ ] Grafo de dependências criado\n- [ ] Features priorizadas\n- [ ] Plano semanal com tarefas diárias\n- [ ] Checkpoints definidos\n- [ ] Template de progresso pronto\n\n## 📋 Estrutura do Plano\n\n**Semana 1**: Setup\n- Day 1: Arquitetura e DB setup\n- Day 2: Autenticação\n- Day 3: Componentes base\n\n**Semana 2**: Feature 1\n- Planejamento\n- Backend\n- Frontend\n- Testes\n\n[...continua por feature]\n\n## 🚀 Como Começar\nVer [`prompt-plano-semanal.md`](./prompt-plano-semanal.md)\n\n## ✅ Quando Pronto\n- [ ] Plano semanal detalha do por dia\n- [ ] Cada tarefa tem tempo estimado\n- [ ] Progresso é rastreável\n\n---\n\n**Status**: 🟢 Pronto para começar\n**Próxima**: FASE 6 (Skills Claude)\n"
+# 📅 FASE 5: PLANO SEMANAL
+
+## Visão Geral
+Criar um plano semanal detalhado com tarefas do dia a dia.
+
+**Duração**: 1 dia
+**Responsável**: Tech Lead + PM
+
+## 🎯 Objetivos
+1. Analisar grafo de dependências
+2. Distribuir features em semanas
+3. Definir tarefas diárias
+4. Criar milestones
+5. Rastrear progresso
+
+## 📂 Documentos a Criar
+- `planejamento/PLANO-SEMANAL.md` - Plano por semana
+- `planejamento/PROGRESSO.md` - Tracking diário
+
+## ✅ Checklist Rápida
+- [ ] Grafo de dependências criado
+- [ ] Features priorizadas
+- [ ] Plano semanal com tarefas diárias
+- [ ] Checkpoints definidos
+- [ ] Template de progresso pronto
+
+## 📋 Estrutura do Plano
+
+**Semana 1**: Setup
+- Day 1: Arquitetura e DB setup
+- Day 2: Autenticação
+- Day 3: Componentes base
+
+**Semana 2**: Feature 1
+- Planejamento
+- Backend
+- Frontend
+- Testes
+
+[...continua por feature]
+
+## 🚀 Como Começar
+🆕 **PROMPT 2.3**: Ver [`prompt-plano-semanal-detalhado.md`](./prompt-plano-semanal-detalhado.md) - Prompt completo e detalhado para criação do plano de execução semanal com Claude Code
+
+## ✅ Quando Pronto
+- [ ] Plano semanal detalhado por dia
+- [ ] Cada tarefa tem tempo estimado
+- [ ] Progresso é rastreável
+
+---
+
+**Status**: 🟢 Pronto para começar
+**Próxima**: FASE 6 (Skills Claude)

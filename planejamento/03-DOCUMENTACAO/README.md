@@ -1,1 +1,45 @@
-# 📝 FASE 3: DOCUMENTAÇÃO\n\n## Visão Geral\nDocumentar completamente a arquitetura, banco de dados e especificação técnica.\n\n**Duração**: 2-3 dias\n**Responsável**: Tech Lead + PM\n\n## 🎯 Objetivos\n1. Converter PRD em especificação técnica\n2. Documentar banco de dados (schema)\n3. Documentar API endpoints\n4. Criar guias de contribuição\n5. Preparar contexto para Claude\n\n## 📂 Documentos a Criar\n- `docs/01-VISAO-GERAL.md` - Overview técnico\n- `docs/02-ARQUITETURA.md` - Arquitetura da app\n- `docs/03-ESPECIFICACAO.md` - Especificação funcional\n- `docs/04-BANCO-DE-DADOS.md` - Schema e migrations\n- `docs/05-API.md` - Endpoints documentados\n- `docs/06-COMPONENTES.md` - Componentes frontend\n- `.ai/contexto-projeto.md` - Para Claude IA\n\n## ✅ Checklist Rápida\n- [ ] Análise do PRD completa\n- [ ] Frontend export analisado\n- [ ] Banco de dados schema definido\n- [ ] API endpoints mapeados\n- [ ] Documentação criada\n- [ ] Contexto IA preparado\n\n## 🚀 Como Começar\nVer [`prompt-analise.md`](./prompt-analise.md) para usar Claude\n\n## ✅ Quando Pronto\n- [ ] Todos os 6 documentos criados\n- [ ] Schema do banco mapeado\n- [ ] APIs documentadas com exemplos\n- [ ] Contexto IA completo\n\n---\n\n**Status**: 🟢 Pronto para começar\n**Próxima**: FASE 4 (Validação)\n"
+# 📝 FASE 3: DOCUMENTAÇÃO
+
+## Visão Geral
+Documentar completamente a arquitetura, banco de dados e especificação técnica.
+
+**Duração**: 2-3 dias
+**Responsável**: Tech Lead + PM
+
+## 🎯 Objetivos
+1. Converter PRD em especificação técnica
+2. Documentar banco de dados (schema)
+3. Documentar API endpoints
+4. Criar guias de contribuição
+5. Preparar contexto para Claude
+
+## 📂 Documentos a Criar
+- `docs/01-VISAO-GERAL.md` - Overview técnico
+- `docs/02-ARQUITETURA.md` - Arquitetura da app
+- `docs/03-ESPECIFICACAO.md` - Especificação funcional
+- `docs/04-BANCO-DE-DADOS.md` - Schema e migrations
+- `docs/05-API.md` - Endpoints documentados
+- `docs/06-COMPONENTES.md` - Componentes frontend
+- `.ai/contexto-projeto.md` - Para Claude IA
+
+## ✅ Checklist Rápida
+- [ ] Análise do PRD completa
+- [ ] Frontend export analisado
+- [ ] Banco de dados schema definido
+- [ ] API endpoints mapeados
+- [ ] Documentação criada
+- [ ] Contexto IA preparado
+
+## 🚀 Como Começar
+🆕 **PROMPT 2.1**: Ver [`prompt-analise-prd-completo.md`](./prompt-analise-prd-completo.md) - Prompt completo e detalhado para análise do PRD e criação de toda documentação com Claude Code
+
+## ✅ Quando Pronto
+- [ ] Todos os 6 documentos criados
+- [ ] Schema do banco mapeado
+- [ ] APIs documentadas com exemplos
+- [ ] Contexto IA completo
+
+---
+
+**Status**: 🟢 Pronto para começar
+**Próxima**: FASE 4 (Validação)
