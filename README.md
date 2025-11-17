@@ -1,6 +1,6 @@
 # 🚀 Processo Completo de Desenvolvimento com IA Code
 
-Um guia estruturado e prático para desenvolver aplicações web completas utilizando **Claude IA** e **Lovable/v0** como ferramentas principais.
+Um guia estruturado e prático para desenvolver aplicações web completas utilizando **Claude IA** e **Figma Make** como ferramentas principais.
 
 ## ⭐ O Que Há de Novo
 
@@ -68,22 +68,23 @@ Quando completo, prossiga para [Fase 1: Design Frontend](#-fase-1-design-fronten
 
 ## 🎨 FASE 1: DESIGN FRONTEND
 
-**Objetivo**: Criar todas as telas e componentes visuais usando IA (Lovable, v0).
+**Objetivo**: Criar todas as telas e componentes visuais usando Figma Make.
 **Duração**: 2-3 dias
-**Ferramentas**: Lovable.dev, v0.dev, ou similar
+**Ferramentas**: **Figma Make** (figma.com/make) - Obrigatório
 
 ### 📂 Arquivos Principais
 - [`planejamento/01-DESIGN-FRONTEND/`](./planejamento/01-DESIGN-FRONTEND/) - Documentos da fase
 - [`planejamento/01-DESIGN-FRONTEND/README.md`](./planejamento/01-DESIGN-FRONTEND/README.md) - Guia da fase
-- [`planejamento/01-DESIGN-FRONTEND/checklist.md`](./planejamento/01-DESIGN-FRONTEND/checklist.md) - Checklist simplificada
-- [`planejamento/01-DESIGN-FRONTEND/prompt-brief-design-completo.md`](./planejamento/01-DESIGN-FRONTEND/prompt-brief-design-completo.md) - Template de prompt
+- [`planejamento/01-DESIGN-FRONTEND/guia-figma-make.md`](./planejamento/01-DESIGN-FRONTEND/guia-figma-make.md) - Guia completo Figma Make
+- [`planejamento/01-DESIGN-FRONTEND/template-prompt-figma-make.md`](./planejamento/01-DESIGN-FRONTEND/template-prompt-figma-make.md) - Template de prompt
+- [`planejamento/01-DESIGN-FRONTEND/checklist.md`](./planejamento/01-DESIGN-FRONTEND/checklist.md) - Checklist da fase
 
 ### ✅ Checklist da Fase
-- [ ] Brief para IA criado
-- [ ] Telas geradas com ferramenta de IA
+- [ ] Prompt criado usando template Figma Make
+- [ ] Telas geradas no Figma Make
 - [ ] Design responsivo (mobile + desktop)
 - [ ] Cliente aprovou design
-- [ ] Código exportado e documentado
+- [ ] Código exportado e salvo em `.ai/frontend-export.md`
 
 ### 🔗 Próxima Fase
 Quando completo, prossiga para [Fase 2: Transição para Backend](#-fase-2-transição-para-backend)
@@ -415,9 +416,9 @@ ai-coding-process/
    - Aprove o escopo
 
 3. **Prossiga para Fase 1**
-   - Use ferramenta de IA (Lovable/v0) para gerar design
+   - Use Figma Make (figma.com/make) para gerar design e código
    - Cliente aprova design
-   - Export o código Next.js + Tailwind
+   - Export o código React + TypeScript + Tailwind
 
 4. **Continue até Fase 10**
    - Siga o plano semanal
@@ -462,6 +463,6 @@ Para dúvidas ou sugestões sobre as fases, consulte os respectivos `README.md` 
 
 ---
 
-**Última atualização**: 15 de Novembro de 2024
-**Versão**: 1.0.0
+**Última atualização**: 17 de Novembro de 2025
+**Versão**: 2.0.0 (Refatorado para Figma Make)
 **Status**: ✅ 100% Completo e Pronto para Uso
