@@ -635,6 +635,103 @@ Prioridades:
 
 ---
 
+---
+
+## 🧹 Limpeza e Reorganização do Projeto
+
+Durante o desenvolvimento no Figma Make, é comum criar componentes duplicados, arquivos de teste, ou código que ficou obsoleto. **Quando o projeto está confuso**, use nosso guia especializado:
+
+📘 **[Guia de Limpeza e Reorganização](./prompt-limpeza-projeto.md)**
+
+### Problemas Comuns que Requerem Limpeza
+
+- ❌ Múltiplas versões do mesmo componente (Header, HeaderOld, HeaderCopy)
+- ❌ Imports quebrados
+- ❌ Componentes não utilizados
+- ❌ Código duplicado
+- ❌ Arquivos de teste esquecidos
+
+### Prompt Rápido de Limpeza
+
+```markdown
+🔍 AUDITORIA E LIMPEZA DO PROJETO
+
+Por favor, faça uma auditoria completa:
+1. Liste a estrutura atual de arquivos
+2. Identifique componentes duplicados/não utilizados
+3. Sugira quais arquivos deletar (AGUARDE confirmação)
+4. Mostre a estrutura ideal reorganizada
+
+Objetivo do projeto: [descreva]
+```
+
+**Ver template completo**: [`prompt-limpeza-projeto.md`](./prompt-limpeza-projeto.md)
+
+---
+
+## 🚀 Quando Migrar para IDE (VSCode/Next.js)?
+
+O Figma Make é perfeito para **protótipos e MVPs**, mas há momentos em que migrar para uma IDE profissional faz sentido.
+
+📘 **[Guia Completo de Migração para IDE](./guia-migracao-ide.md)**
+
+### ✅ FIQUE no Figma Make se:
+
+- ✅ Está validando ideia/MVP
+- ✅ Funcionalidades básicas (CRUD + Supabase)
+- ✅ Time pequeno/solo
+- ✅ Precisa iterar rápido
+- ✅ Não precisa SEO avançado
+- ✅ Não precisa backend complexo
+
+### ⚠️ MIGRE para IDE quando:
+
+- ⚠️ Validou o produto com usuários
+- ⚠️ Precisa escalar (50k+ usuários/mês)
+- ⚠️ SEO é crítico
+- ⚠️ Precisa features que Figma Make não faz:
+  - Geração de PDFs complexos
+  - Integração com APIs externas complexas
+  - IA/ML avançado
+  - Testes automatizados
+  - CI/CD
+  - Múltiplos ambientes (dev/staging/prod)
+
+### Stack Recomendada Pós-Migração
+
+```
+Next.js 14 + TypeScript
+  ↓
+Tailwind CSS v4 (mesma do Figma Make!)
+  ↓
+Shadcn/ui (mesmos componentes!)
+  ↓
+Supabase (mantém o backend!)
+  ↓
+Vercel (deploy)
+```
+
+**80% do código é reutilizável!**
+
+**Ver guia completo**: [`guia-migracao-ide.md`](./guia-migracao-ide.md)
+
+---
+
+## 📚 Documentos Relacionados
+
+Durante o processo de desenvolvimento com Figma Make, consulte:
+
+| Documento | Quando Usar |
+|-----------|-------------|
+| [`template-prompt-figma-make.md`](./template-prompt-figma-make.md) | Criar projeto inicial |
+| [`prompt-limpeza-projeto.md`](./prompt-limpeza-projeto.md) | Projeto está confuso/duplicado |
+| [`guia-migracao-ide.md`](./guia-migracao-ide.md) | Decidir se/quando migrar para IDE |
+| [`componentes-shadcn.md`](./componentes-shadcn.md) | Escolher componentes |
+| [`design-system.md`](./design-system.md) | Definir cores e tokens |
+| [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) | Classes Tailwind |
+
+---
+
 **Última atualização**: 2025-11-17
-**Versão**: 1.0
+**Versão**: 1.1 (Adicionado limpeza e migração)
 **Status**: ✅ Pronto para uso

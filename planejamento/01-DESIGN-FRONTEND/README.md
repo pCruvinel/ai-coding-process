@@ -45,6 +45,10 @@ Criar todas as telas, componentes visuais e código frontend da aplicação usan
 - 🎨 [`design-system.md`](./design-system.md) - Sistema de design padrão
 - 🎨 [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) - Padrões Tailwind CSS v4
 
+### Guias Avançados
+- 🧹 [`prompt-limpeza-projeto.md`](./prompt-limpeza-projeto.md) - **Limpeza quando está confuso**
+- 🚀 [`guia-migracao-ide.md`](./guia-migracao-ide.md) - **Quando/como migrar para IDE**
+
 ---
 
 ## 🔄 Fluxo da Fase
@@ -320,6 +324,35 @@ Marque todos os itens antes de prosseguir:
    - "Error state com mensagem amigável"
    - "Toast notifications para feedback"
 
+### Problema: Projeto está confuso com componentes duplicados
+
+**Solução**:
+1. Usar o **[Prompt de Limpeza](./prompt-limpeza-projeto.md)**
+2. Solicitar auditoria completa do projeto
+3. Aguardar sugestões de exclusão
+4. Confirmar e reorganizar
+
+---
+
+## 🚀 E Depois do Figma Make?
+
+### Migrar para IDE?
+
+Depois de finalizar no Figma Make, você pode:
+
+1. **Continuar no Figma Make** (recomendado para MVPs)
+   - Use Supabase Edge Functions para backend
+   - Escala até 10k-50k usuários
+   - Mantém velocidade de iteração
+
+2. **Migrar para Next.js + IDE** (para escalar)
+   - Quando validou o produto
+   - Precisa SEO avançado
+   - Features complexas (PDFs, IA, integrações)
+   - Time vai crescer
+
+📘 **Ver guia completo**: [`guia-migracao-ide.md`](./guia-migracao-ide.md)
+
 ---
 
 ## 📚 Padrões que Seguimos
@@ -349,6 +382,8 @@ Consulte estes documentos durante a fase:
 | [`design-system.md`](./design-system.md) | Padrões de design e tokens |
 | [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) | Utility classes Tailwind |
 | [`checklist.md`](./checklist.md) | Checklist detalhada da fase |
+| [`prompt-limpeza-projeto.md`](./prompt-limpeza-projeto.md) | **Limpeza quando está confuso** |
+| [`guia-migracao-ide.md`](./guia-migracao-ide.md) | **Quando/como migrar para IDE** |
 
 ---
 
@@ -382,4 +417,12 @@ Para dúvidas sobre Figma Make ou esta fase:
 **Próxima fase**: [FASE 2: Transição para Backend](../02-TRANSICAO-BACKEND/README.md)
 
 **Última atualização**: 2025-11-17
-**Versão**: 2.0 (Refatorado para Figma Make)
+**Versão**: 2.1 (Adicionado limpeza e migração)
+
+---
+
+## 📌 Novidades (v2.1)
+
+- ✅ **Guia de Limpeza**: Para quando o projeto está confuso com componentes duplicados
+- ✅ **Guia de Migração**: Quando e como migrar para IDE (Next.js)
+- ✅ **Prompts Prontos**: Templates para auditoria e reorganização
