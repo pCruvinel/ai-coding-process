@@ -1,148 +1,385 @@
-# 🎨 FASE 1: DESIGN FRONTEND COM IA
+# 🎨 FASE 1: DESIGN FRONTEND COM FIGMA MAKE
 
 ## Visão Geral
-Criar todas as telas, componentes visuais e sistema de design da aplicação usando ferramentas de **IA de design** (Lovable.dev, v0.dev, ou similar) que geram código Next.js + Tailwind + Shadcn UI automaticamente.
+
+Criar todas as telas, componentes visuais e código frontend da aplicação usando **Figma Make** (figma.com/make) - plataforma de IA especializada em codificação frontend que gera código React + TypeScript + Tailwind + Shadcn/ui automaticamente.
 
 **Duração estimada**: 2-3 dias
 **Responsável**: PM + Cliente
-**Ferramentas**: Lovable, v0, ou ferramenta similar de IA
-**Output**: Next.js 14 + Tailwind CSS + Shadcn/ui
+**Ferramenta**: **Figma Make** (obrigatório)
+**Output**: React + TypeScript + Tailwind CSS v4 + Shadcn/ui
+
+---
 
 ## 🎯 Objetivos
-1. Converter PRD em prompts claros para ferramenta de IA
-2. Gerar todas as telas principais através de IA
+
+1. Converter PRD em prompt claro e objetivo para Figma Make
+2. Gerar todas as telas principais através do Figma Make
 3. Revisar e ajustar componentes e layout
 4. Obter aprovação visual do cliente
 5. Exportar código funcional
 6. Documentar telas e componentes criados
 
-## 📂 Arquivos Nesta Fase
-- [`checklist.md`](./checklist.md) - Checklist simplificada da fase
-- [`prompt-brief-design-completo.md`](./prompt-brief-design-completo.md) - Template de prompt para IA
-- [`prompt-design-pt-br.md`](./prompt-design-pt-br.md) - Prompt em português
-- [`prompt-documento-transicao.md`](./prompt-documento-transicao.md) - Documentar o export
-- [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) - Padrões Tailwind
-- [`componentes-shadcn.md`](./componentes-shadcn.md) - Componentes Shadcn/ui
-- [`design-system.md`](./design-system.md) - Sistema de design padrão
+---
+
+## 📂 Arquivos Desta Fase
+
+### Guias Principais
+- 📘 [`guia-figma-make.md`](./guia-figma-make.md) - **Guia completo do Figma Make**
+  - Capacidades da plataforma
+  - Componentes disponíveis
+  - Como escrever bons prompts
+  - Exemplos práticos
+
+- 📝 [`template-prompt-figma-make.md`](./template-prompt-figma-make.md) - **Template de prompt**
+  - Template completo
+  - Exemplo preenchido
+  - Versão simplificada para MVPs
+
+- ✅ [`checklist.md`](./checklist.md) - **Checklist da fase**
+  - Tarefas passo a passo
+  - Critérios de conclusão
+
+### Referências Técnicas
+- 🎨 [`componentes-shadcn.md`](./componentes-shadcn.md) - Lista completa Shadcn/ui
+- 🎨 [`design-system.md`](./design-system.md) - Sistema de design padrão
+- 🎨 [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) - Padrões Tailwind CSS v4
+
+---
 
 ## 🔄 Fluxo da Fase
+
 ```
-PRD → Brief para IA → Gerar com Lovable/v0 → Revisar →
-Cliente aprova → Export código → Documentar
+PRD → Prompt Figma Make → Gerar no Figma Make → Revisar →
+Cliente aprova → Export código → Documentar → Próxima Fase
 ```
+
+---
 
 ## ✅ Checklist Rápida
-- [ ] Brief de design criado baseado no PRD
-- [ ] Telas principais geradas na ferramenta de IA
+
+- [ ] PRD revisado e compreendido
+- [ ] Prompt criado usando template
+- [ ] Telas principais geradas no Figma Make
 - [ ] Design System básico definido (cores, tipografia)
-- [ ] Componentes Shadcn integrados
+- [ ] Componentes Shadcn/ui integrados
 - [ ] Design responsivo (mobile + desktop)
-- [ ] Estados principais (normal, loading, error)
+- [ ] Estados principais (normal, loading, error, empty)
 - [ ] Cliente aprovou visualmente
-- [ ] Código exportado e documentado
+- [ ] Código exportado e salvo em `.ai/frontend-export.md`
+- [ ] Componentes documentados
 
-## 🛠️ Ferramentas Recomendadas
+---
 
-### Opção 1: Lovable.dev (Recomendado)
-- IA que gera aplicações completas
-- Suporte a Next.js + Tailwind + Shadcn
-- Export direto para código
-- Interface intuitiva
+## 🛠️ Ferramenta: Figma Make
 
-### Opção 2: v0.dev (Vercel)
-- Focado em componentes React
-- Excelente para UI/UX
-- Integração com Shadcn
-- Gratuito para uso básico
+### Por Que Figma Make?
 
-### Opção 3: Outras ferramentas
-- Builder.io
-- Framer
-- Qualquer ferramenta que exporte Next.js + Tailwind
+**Figma Make** é uma plataforma de **Codificação com IA para FRONTEND** que:
+
+✅ Gera código React + TypeScript production-ready
+✅ Usa Tailwind CSS v4.0 nativamente
+✅ Tem biblioteca Shadcn/ui completa integrada
+✅ Suporta integração nativa com Supabase
+✅ Produz componentes modernos com hooks e effects
+✅ Gera código limpo e bem estruturado
+
+**IMPORTANTE**: Esta não é apenas uma ferramenta de design visual, mas sim de **CODIFICAÇÃO**. Por isso, os prompts devem ser diretos e objetivos, sem processos complexos.
+
+### Acesso
+
+🌐 **Link**: [figma.com/make](https://figma.com/make)
+
+---
 
 ## 🚀 Como Começar
 
-### Passo 1: Preparar Brief
-1. Revisar o PRD completo
-2. Identificar todas as telas necessárias
-3. Definir preferências de design (cores, estilo)
-4. Usar template em [`prompt-brief-design-completo.md`](./prompt-brief-design-completo.md)
+### Passo 1: Preparar Prompt
 
-### Passo 2: Gerar com IA
-1. Escolher ferramenta (Lovable ou v0)
-2. Inserir prompt do brief
-3. Gerar telas uma por uma ou conjunto completo
-4. Revisar e fazer ajustes iterativos
+1. **Revisar o PRD completo**
+   - Entender todas as funcionalidades
+   - Identificar todas as telas necessárias
+   - Listar interações principais
+
+2. **Usar o template**
+   - Abrir [`template-prompt-figma-make.md`](./template-prompt-figma-make.md)
+   - Preencher todas as seções
+   - Ser específico nos componentes Shadcn/ui
+
+3. **Definir preferências de design**
+   - Cores (hex codes)
+   - Estilo visual (moderno, minimalista, etc.)
+   - Referências visuais (se houver)
+
+**Dica**: Consulte [`guia-figma-make.md`](./guia-figma-make.md) para saber como mencionar componentes e bibliotecas corretamente.
+
+---
+
+### Passo 2: Gerar no Figma Make
+
+1. **Acessar Figma Make**
+   - Ir para [figma.com/make](https://figma.com/make)
+   - Fazer login
+
+2. **Colar o prompt**
+   - Copiar prompt do template preenchido
+   - Colar no Figma Make
+   - Enviar
+
+3. **Revisar geração inicial**
+   - Verificar componentes criados
+   - Testar interações básicas
+   - Identificar ajustes necessários
+
+4. **Iterar e refinar**
+   - Fazer ajustes incrementais
+   - Testar responsividade
+   - Ajustar cores e estilos
+   - Adicionar componentes faltantes
+
+**Máximo**: 2-3 rodadas de iteração (não prolongar demais)
+
+---
 
 ### Passo 3: Aprovação Cliente
-1. Compartilhar link de preview
-2. Coletar feedback (máx 2-3 rodadas)
-3. Fazer ajustes solicitados
-4. Obter aprovação por escrito
+
+1. **Compartilhar preview**
+   - Gerar link de visualização
+   - Enviar para cliente/stakeholders
+   - Solicitar feedback
+
+2. **Coletar feedback**
+   - Máximo 2-3 rodadas de feedback
+   - Priorizar mudanças críticas para MVP
+   - Documentar solicitações
+
+3. **Fazer ajustes solicitados**
+   - Implementar mudanças aprovadas
+   - Re-gerar preview
+   - Re-enviar para validação
+
+4. **Obter aprovação por escrito**
+   - Email ou mensagem confirmando aprovação
+   - Prints das telas aprovadas (opcional)
+   - Documentar aprovação em histórico
+
+---
 
 ### Passo 4: Export e Documentação
-1. Exportar código da ferramenta
-2. Validar que código funciona localmente
-3. Documentar em `.ai/frontend-export.md`
-4. Listar componentes e telas criadas
 
-## 📋 Telas Principais (Exemplo)
-Para qualquer projeto típico:
-1. **Login/Signup** - Autenticação
-2. **Dashboard** - Visão geral principal
-3. **Listagem** - Lista de itens principais
+1. **Exportar código do Figma Make**
+   - Baixar código gerado
+   - Revisar estrutura de arquivos
+   - Verificar dependências
+
+2. **Validar código localmente (opcional)**
+   - Criar projeto teste
+   - Instalar dependências
+   - Rodar localmente
+   - Verificar se funciona
+
+3. **Salvar em `.ai/frontend-export.md`**
+   - Copiar código exportado
+   - Salvar no arquivo
+   - Adicionar metadata (data, versão, link Figma Make)
+   - Listar componentes criados
+
+4. **Documentar componentes**
+   - Listar todas as telas criadas
+   - Listar todos os componentes
+   - Descrever interações principais
+   - Anotar decisões de design importantes
+
+**Arquivo**: `.ai/frontend-export.md`
+
+```markdown
+# Frontend Export - Figma Make
+
+**Data**: 2025-11-17
+**Versão**: 1.0
+**Link Figma Make**: [URL]
+
+## Telas Criadas
+- Home
+- Dashboard
+- Login
+- [...]
+
+## Componentes Principais
+- Header
+- Sidebar
+- Card
+- Form
+- [...]
+
+## Código Exportado
+
+[Cole o código aqui]
+
+## Observações
+- [Anotações importantes]
+```
+
+---
+
+## 📋 Telas Principais (Exemplo Genérico)
+
+Para qualquer projeto típico, considere estas telas:
+
+1. **Auth** - Login/Signup/Recuperação de senha
+2. **Dashboard** - Visão geral principal (métricas, resumos)
+3. **Listagem** - Lista de itens principais (tabela/grid)
 4. **Detalhes** - Visualizar item específico
 5. **Criar/Editar** - Formulários CRUD
 6. **Perfil/Settings** - Configurações do usuário
 
-## ✅ Quando Pronto
-- [ ] Todas as telas do PRD criadas
-- [ ] Componentes Shadcn/ui integrados
-- [ ] Design responsivo funciona
-- [ ] Cliente aprovou visualmente
-- [ ] Código exportado e funcionando
-- [ ] Arquivo `.ai/frontend-export.md` completo
-- [ ] Lista de componentes documentada
+**Adapte** conforme seu PRD específico.
+
+---
+
+## ✅ Quando Pronto para Próxima Fase
+
+Marque todos os itens antes de prosseguir:
+
+- [ ] Todas as telas do PRD foram criadas no Figma Make
+- [ ] Componentes Shadcn/ui estão integrados
+- [ ] Design é responsivo (mobile, tablet, desktop)
+- [ ] Cliente/stakeholders aprovaram visualmente
+- [ ] Código foi exportado do Figma Make
+- [ ] Código está salvo em `.ai/frontend-export.md`
+- [ ] Lista de componentes e telas está documentada
+- [ ] Decisões de design estão anotadas
+
+**Próxima Fase**: [Fase 2: Transição para Backend](../02-TRANSICAO-BACKEND/README.md)
+
+---
 
 ## 💡 Dicas Importantes
 
 ### ✅ Fazer
-- ✅ Usar prompts claros e específicos
+
+- ✅ Usar prompts claros, específicos e objetivos
+- ✅ Mencionar componentes Shadcn/ui pelo nome
+- ✅ Especificar cores em hex codes
 - ✅ Gerar telas incrementalmente (não tudo de uma vez)
-- ✅ Testar código exportado localmente
+- ✅ Testar código exportado (pelo menos visualmente)
 - ✅ Documentar componentes criados
 - ✅ Obter aprovação cliente antes de prosseguir
+- ✅ Consultar [`guia-figma-make.md`](./guia-figma-make.md) frequentemente
 
 ### ❌ Evitar
+
 - ❌ Criar designs muito complexos no MVP
-- ❌ Múltiplas rodadas infinitas de feedback
+- ❌ Múltiplas rodadas infinitas de feedback (máx 2-3)
 - ❌ Pular documentação do export
-- ❌ Não testar código exportado
+- ❌ Não testar código exportado antes de prosseguir
 - ❌ Adicionar features não previstas no PRD
+- ❌ Usar prompts vagos ou genéricos
+- ❌ Esquecer de mencionar responsividade
+
+---
 
 ## 🆘 Problemas Comuns
 
-### Problema: IA gerou código que não funciona
-**Solução**: Pedir para regenerar com instruções mais claras. Se persistir, fazer ajustes manuais mínimos e documentar.
+### Problema: Figma Make gerou código que não funciona
+
+**Solução**:
+1. Revisar o prompt - foi específico o suficiente?
+2. Mencionar componentes Shadcn/ui pelo nome
+3. Especificar bibliotecas necessárias
+4. Se persistir, fazer ajustes manuais mínimos e documentar
 
 ### Problema: Cliente quer muitas mudanças
-**Solução**: Limitar a 2-3 rodadas de feedback. Priorizar mudanças críticas para MVP.
 
-### Problema: Componentes não parecem com Shadcn
-**Solução**: Ser explícito no prompt: "Use componentes Shadcn/ui exatamente como na documentação"
+**Solução**:
+1. Limitar a 2-3 rodadas de feedback
+2. Priorizar mudanças críticas para MVP
+3. Documentar mudanças não prioritárias para versão futura
+4. Ser firme no escopo do MVP
+
+### Problema: Componentes não parecem com Shadcn/ui
+
+**Solução**:
+1. Ser explícito no prompt: "Use componentes Shadcn/ui exatamente como na documentação"
+2. Mencionar componentes específicos: "button, card, dialog, form"
+3. Consultar [`componentes-shadcn.md`](./componentes-shadcn.md)
 
 ### Problema: Design não é responsivo
-**Solução**: Incluir no prompt: "Design deve ser totalmente responsivo (mobile-first)"
+
+**Solução**:
+1. Incluir no prompt: "Design deve ser totalmente responsivo (mobile-first)"
+2. Especificar breakpoints: "mobile (< 640px), tablet (640-1024px), desktop (> 1024px)"
+3. Mencionar "usar grid/flex do Tailwind"
+
+### Problema: Faltam estados (loading, error, empty)
+
+**Solução**:
+1. Mencionar explicitamente no prompt:
+   - "Skeleton loaders para estado loading"
+   - "Empty state quando não há dados"
+   - "Error state com mensagem amigável"
+   - "Toast notifications para feedback"
+
+---
 
 ## 📚 Padrões que Seguimos
-- ✅ Tailwind CSS para estilos
-- ✅ Shadcn/ui para componentes base
-- ✅ Mobile-first responsive
-- ✅ Componentização reutilizável
-- ✅ Acessibilidade básica (WCAG AA)
-- ✅ TypeScript para type safety
+
+Ao gerar no Figma Make, garanta que:
+
+- ✅ **React + TypeScript** - Componentes `.tsx` tipados
+- ✅ **Tailwind CSS v4** - Utility classes para estilos
+- ✅ **Shadcn/ui** - Componentes base consistentes
+- ✅ **Mobile-first** - Responsivo por padrão
+- ✅ **Componentização** - Reutilizável e modular
+- ✅ **Acessibilidade** - WCAG AA (labels, ARIA, keyboard nav)
+- ✅ **Estados** - Loading, error, empty, success
+- ✅ **Type Safety** - Props tipadas, sem `any`
+
+---
+
+## 📖 Documentação de Referência
+
+Consulte estes documentos durante a fase:
+
+| Documento | Uso |
+|-----------|-----|
+| [`guia-figma-make.md`](./guia-figma-make.md) | Capacidades completas do Figma Make |
+| [`template-prompt-figma-make.md`](./template-prompt-figma-make.md) | Template para criar prompts |
+| [`componentes-shadcn.md`](./componentes-shadcn.md) | Lista de componentes disponíveis |
+| [`design-system.md`](./design-system.md) | Padrões de design e tokens |
+| [`padroes-tailwind-v4.md`](./padroes-tailwind-v4.md) | Utility classes Tailwind |
+| [`checklist.md`](./checklist.md) | Checklist detalhada da fase |
+
+---
+
+## 🎯 Critérios de Sucesso
+
+A Fase 1 está completa quando:
+
+- ✅ Todas as telas do PRD estão criadas
+- ✅ Design é moderno, limpo e profissional
+- ✅ Componentes seguem padrão Shadcn/ui
+- ✅ É responsivo em todos os tamanhos de tela
+- ✅ Estados visuais estão implementados
+- ✅ Cliente aprovou formalmente
+- ✅ Código está exportado e documentado
+- ✅ Equipe entende os componentes criados
+
+---
+
+## 📞 Suporte
+
+Para dúvidas sobre Figma Make ou esta fase:
+
+1. Consultar [`guia-figma-make.md`](./guia-figma-make.md)
+2. Revisar exemplos em [`template-prompt-figma-make.md`](./template-prompt-figma-make.md)
+3. Verificar [`checklist.md`](./checklist.md)
 
 ---
 
 **Status**: 🟢 Pronto para começar
-**Próxima fase**: FASE 2: Transição para Backend (Setup com Claude Code)
+**Ferramenta obrigatória**: Figma Make (figma.com/make)
+**Próxima fase**: [FASE 2: Transição para Backend](../02-TRANSICAO-BACKEND/README.md)
+
+**Última atualização**: 2025-11-17
+**Versão**: 2.0 (Refatorado para Figma Make)
