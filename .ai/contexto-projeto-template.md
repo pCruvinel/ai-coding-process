@@ -1,1 +1,168 @@
-# 🤖 Contexto do Projeto para Claude IA\n\n## IMPORTANTE: CUSTOMIZE ESTE ARQUIVO PARA SEU PROJETO!\n\nEste arquivo deve ser lido por Claude IA para entender completamente seu projeto.\n\n---\n\n## 📋 Informações do Projeto\n\n**Nome**: [Nome do Projeto]\n**Descrição**: [1-3 frases]\n**PRD**: [`planejamento/00-PRE-DESENVOLVIMENTO/prd.md`]\n**GitHub**: [URL do repositório]\n\n---\n\n## 🏗️ Arquitetura Técnica\n\n### Stack\n- **Frontend**: Next.js 14 + React 18 + Tailwind CSS v3 + TypeScript\n- **Backend**: Next.js API Routes + Supabase (PostgreSQL)\n- **Auth**: Supabase Auth (JWT)\n- **Hosting**: Vercel (Frontend) + Supabase (Backend)\n- **ORM**: Supabase SDK (não Prisma, queries diretas)\n\n### Banco de Dados\n- **Provider**: Supabase (PostgreSQL)\n- **Migrations**: `supabase/migrations/*.sql`\n- **RLS**: Habilitado em todas as tabelas\n\n### Autenticação\n- **Provider**: Supabase Auth\n- **Strategy**: JWT com refresh token\n- **Roles**: user, admin, moderator\n- **RLS**: Usuários veem próprios dados\n\n---\n\n## 📂 Estrutura de Código\n\n```\nsrc/\n  app/                    # Next.js App Router\n    (auth)/              # Grupo de páginas de auth\n    (app)/               # Grupo de páginas autenticadas\n    api/                 # API Routes (/api/...)\n  components/            # Componentes React\n    ui/                  # Componentes básicos (Button, Input, etc)\n    forms/               # Componentes de forma\n    layouts/             # Layouts reutilizáveis\n  lib/\n    supabase/           # Setup do Supabase\n      server.ts         # Client serverside\n      client.ts         # Client browserside\n    api/                # Funções de API\n    hooks.ts            # Custom hooks\n  types/\n    database.types.ts   # Auto-gerado: types do Supabase\n    index.ts            # App types\n  styles/\n    globals.css         # Estilos globais\n```\n\n---\n\n## 🔐 Segurança\n\n### RLS Policies\n- Usuários veem só seus dados\n- Admins veem tudo\n- Roles não podem ser mudadas por usuário\n\n### Env Vars Sensíveis\n- `NEXT_PUBLIC_SUPABASE_URL` - URL pública do Supabase\n- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Chave pública (OK expor)\n- `SUPABASE_SERVICE_ROLE_KEY` - NUNCA expor no frontend\n- Outras: Stripe, email, etc\n\n---\n\n## 📊 Modelo de Dados\n\n### Tabelas Principais\n\n**public.users**\n```sql\nid UUID PRIMARY KEY -- FK para auth.users\nemail VARCHAR\nfull_name VARCHAR\nrole VARCHAR DEFAULT 'user'\ncreated_at TIMESTAMP\nupdated_at TIMESTAMP\n```\n\n**public.roles**\n```sql\nid UUID PRIMARY KEY\nname VARCHAR UNIQUE\ndescription VARCHAR\n```\n\n[Adicione suas outras tabelas aqui]\n\n---\n\n## 🎯 Features MVP\n\n1. **Feature 1**: [Descrição]\n   - Endpoint: `POST /api/feature1/create`\n   - Tabela: `public.feature1`\n   - Componente: `components/Feature1.tsx`\n\n2. **Feature 2**: [Descrição]\n   - [Detalhes...]\n\n[Continua...]\n\n---\n\n## 🔗 Integração com Claude IA\n\n### Quando Usar Esta Skill\nChad Code: `@contexto-projeto`\n\n### O que Claude Sabe\n- Stack completo\n- Arquitetura geral\n- Features MVP\n- Padrões de código do projeto\n- Estrutura de pastas\n\n### O que Claude NÃO Sabe (use skills específicas)\n- Detalhes de uma feature específica (use skill de feature)\n- Padrões de código (use skill de padrões)\n- Como debugar um erro (use skill de debugging)\n\n---\n\n## 📚 Documentação Relacionada\n\n- **PRD**: `planejamento/00-PRE-DESENVOLVIMENTO/prd.md`\n- **Arquitetura**: `docs/02-ARQUITETURA.md`\n- **API**: `docs/05-API.md`\n- **Banco de Dados**: `docs/04-BANCO-DE-DADOS.md`\n- **Padrões de Código**: `.claude/skills/02-padroes-codigo/SKILL.md`\n\n---\n\n## 💡 Dicas para Claude\n\n1. **Sempre** consulte `docs/` antes de responder\n2. **Sempre** verifique RLS antes de fazer queries\n3. **Sempre** use TypeScript (tipagem completa)\n4. **Sempre** teste localmente antes de sugerir\n5. **Nunca** exponha env vars sensíveis\n\n---\n\n## ✅ Checklist de Completude\n\nEste arquivo está completo quando tem:\n- [ ] Stack técnico documentado\n- [ ] Estrutura de pastas clara\n- [ ] Modelo de dados básico\n- [ ] Features MVP listadas\n- [ ] Padrões de segurança descritos\n- [ ] Links para docs relacionados\n\n---\n\n**Atualizar este arquivo sempre que:**\n- Nova feature é adicionada\n- Stack mudar\n- Padrão arquitetural mudar\n- Nova tabela criada\n\n---\n\n**Última atualização**: [DATA]\n**Atualizado por**: [NOME]\n"
+# 🤖 Contexto do Projeto para Claude IA
+
+## IMPORTANTE: CUSTOMIZE ESTE ARQUIVO PARA SEU PROJETO!
+
+Este arquivo deve ser lido por Claude IA para entender completamente seu projeto.
+
+---
+
+## 📋 Informações do Projeto
+
+**Nome**: [Nome do Projeto]
+**Descrição**: [1-3 frases descrevendo o projeto]
+**PRD**: `planejamento/00-PRE-DESENVOLVIMENTO/prd.md`
+**GitHub**: https://aws.amazon.com/pt/what-is/repo/
+
+---
+
+## 🏗️ Arquitetura Técnica
+
+### Stack
+- **Frontend**: Next.js 14 + React 18 + Tailwind CSS v4 + TypeScript
+- **Backend**: Next.js API Routes + Supabase (PostgreSQL)
+- **Auth**: Supabase Auth (JWT)
+- **Hosting**: Vercel (Frontend) + Supabase (Backend)
+- **ORM**: Supabase SDK (não Prisma, queries diretas)
+
+### Banco de Dados
+- **Provider**: Supabase (PostgreSQL)
+- **Migrations**: `supabase/migrations/*.sql`
+- **RLS**: Habilitado em todas as tabelas
+
+### Autenticação
+- **Provider**: Supabase Auth
+- **Strategy**: JWT com refresh token
+- **Roles**: user, admin, moderator
+- **RLS**: Usuários veem próprios dados
+
+---
+
+## 📂 Estrutura de Código
+
+src/ app/ # Next.js App Router (auth)/ # Grupo de páginas de auth (app)/ # Grupo de páginas autenticadas api/ # API Routes (/api/...) components/ # Componentes React ui/ # Componentes básicos (Button, Input, etc - Shadcn) forms/ # Componentes de formulário layouts/ # Layouts reutilizáveis lib/ supabase/ # Setup do Supabase server.ts # Client serverside client.ts # Client browserside api/ # Funções de API hooks.ts # Custom hooks types/ database.types.ts # Auto-gerado: types do Supabase index.ts # App types styles/ globals.css # Estilos globais
+
+
+---
+
+## 🔐 Segurança
+
+### RLS Policies
+- Usuários veem só seus dados
+- Admins veem tudo
+- Roles não podem ser mudadas por usuário
+
+### Env Vars Sensíveis
+- `NEXT_PUBLIC_SUPABASE_URL` - URL pública do Supabase
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Chave pública (OK expor)
+- `SUPABASE_SERVICE_ROLE_KEY` - NUNCA expor no frontend
+- Outras: Stripe, email, etc
+
+---
+
+## 📊 Modelo de Dados
+
+### Tabelas Principais
+
+**public.users**
+```sql
+id UUID PRIMARY KEY -- FK para auth.users
+email VARCHAR
+full_name VARCHAR
+role VARCHAR DEFAULT 'user'
+created_at TIMESTAMP
+updated_at TIMESTAMP
+public.roles
+
+SQL
+
+id UUID PRIMARY KEY
+name VARCHAR UNIQUE
+description VARCHAR
+```
+[Adicione suas outras tabelas aqui]
+
+🎯 Features MVP
+Feature 1: [Descrição]
+
+Endpoint: POST /api/feature1/create
+
+Tabela: public.feature1
+
+Componente: components/Feature1.tsx
+
+Feature 2: [Descrição]
+
+[Detalhes...]
+
+[Continua...]
+
+🔗 Integração com Claude IA
+Quando Usar Esta Skill
+Claude Code: @contexto-projeto
+
+O que Claude Sabe
+Stack completo
+
+Arquitetura geral
+
+Features MVP
+
+Padrões de código do projeto
+
+Estrutura de pastas
+
+O que Claude NÃO Sabe (use skills específicas)
+Detalhes de uma feature específica (use skill de feature)
+
+Padrões de código (use skill de padrões)
+
+Como debugar um erro (use skill de debugging)
+
+📚 Documentação Relacionada
+PRD: planejamento/00-PRE-DESENVOLVIMENTO/prd.md
+
+Arquitetura: docs/02-ARQUITETURA.md
+
+API: docs/05-API.md
+
+Banco de Dados: docs/04-BANCO-DE-DADOS.md
+
+Padrões de Código: .claude/skills/02-padroes-codigo/SKILL.md
+
+💡 Dicas para Claude
+Sempre consulte docs/ antes de responder
+
+Sempre verifique RLS antes de fazer queries
+
+Sempre use TypeScript (tipagem completa)
+
+Sempre teste localmente antes de sugerir
+
+Nunca exponha env vars sensíveis
+
+✅ Checklist de Completude
+Este arquivo está completo quando tem:
+
+[ ] Stack técnico documentado
+
+[ ] Estrutura de pastas clara
+
+[ ] Modelo de dados básico
+
+[ ] Features MVP listadas
+
+[ ] Padrões de segurança descritos
+
+[ ] Links para docs relacionados
+
+Atualizar este arquivo sempre que:
+
+Nova feature é adicionada
+
+Stack mudar
+
+Padrão arquitetural mudar
+
+Nova tabela criada
+
+Última atualização: [DATA] Atualizado por: [NOME]
