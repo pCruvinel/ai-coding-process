@@ -5,12 +5,12 @@
 ### Preparação Inicial
 - [ ] PRD da Fase 0 está aprovado
 - [ ] Design da Fase 1 está finalizado
-- [ ] Código frontend exportado do Lovable/v0
-- [ ] Acesso ao repositório GitHub/GitLab
+- [ ] Código frontend exportado do Figma Make
+- [ ] Acesso ao repositório GitHub
 - [ ] Node.js instalado (versão 18+ recomendada)
 - [ ] NPM ou Yarn instalado
 - [ ] Git configurado localmente
-- [ ] Editor de código instalado (VS Code recomendado)
+- [ ] Editor de código instalado (Antigravity)
 
 ### Verificação de Sistema
 - [ ] `node --version` retorna v18+
@@ -23,7 +23,7 @@
 ## 📦 SETUP DO REPOSITÓRIO
 
 ### Criar/Clonar Repositório
-- [ ] Repositório criado no GitHub/GitLab
+- [ ] Repositório criado no GitHub
 - [ ] Repositório clonado localmente
 - [ ] Branch principal (main/master) existe
 - [ ] Branch `develop` criado
